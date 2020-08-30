@@ -1,0 +1,20 @@
+// colours
+
+$navy: #070e63;
+$red: #b11116;
+$teal: #1f8da2;
+$yellow: #f2a900;
+$purple: #500878;
+$light-grey: #b3b3b3;
+$dark-grey: #4d4d4d;
+
+
+// highlight colours
+$yellow-hover: lighten($yellow, 10%);
+$purple-hover: lighten($purple, 10%);
+
+// breakpoints
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;

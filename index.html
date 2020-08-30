@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender Balance Guide for media</title>
+
+    <!-- bootstrap js -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- temp font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- animate on scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- link to custom stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- link to fontawesome -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+</head>
+<body>
+
+    <div class="load container-fluid">
+        <div id="stripes">
+            <div class="stripe navy"></div><div class="stripe red" style="left: 20vw"></div><div class="stripe teal" style="left: 40vw"></div><div class="stripe yellow" style="left: 60vw"></div><div class="stripe purple" style="left: 80vw"></div>
+        </div>
+
+        <div id="loading" class="d-flex justify-content-center align-items-center">
+            <img src="assets/loader.gif" width="80px">
+            </div>
+        </div>
+    </div>
+
+    <header class="container-fluid">
+        <div class="row d-flex justify-content-between">
+            <div id="logo" class="col-1">
+                <a href="#landing">
+                    <img src="assets/WIN_logo.png" alt="Women In News">
+                </a>
+            </div>
+            <div id="menus" class="col-10 d-flex justify-content-end align-items-center">
+                <!-- language change button -->
+                <button class="btn btn-light">
+                    عربى
+                </button>
+                <!-- progress menu button -->
+                <button id="progress-menu" class="btn btn-warning">
+                    <span class="sr-only">Check your progress</span>
+                    <i class="fas fa-check"></i>
+                </button>
+                <!-- menu button -->
+                <button id="menu" class="btn btn-secondary">
+                    <span class="sr-only">Menu</span>
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="container-fluid">
+        <div class="row">
+            <div class="d-none screen"></div>
+            <div class="col-12 menu">
+                
+            </div>
+        </div>
+    </nav>
+
+    <div id="progress" class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                progress bar
+            </div>
+        </div>
+    </div>
+
+    <section id="landing">
+    </section>
+
+    <section id="one">
+        <p>one</p>
+    </section>
+
+    <section id="two">
+        <p>two</p>
+    </section>
+
+    <section id="three">
+        <p>three</p>
+    </section>
+
+    <section id="four">
+        <p>four</p>
+    </section>
+
+    <!-- bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- loading -->
+    <script src="js/load.js"></script>
+
+    <!-- general -->
+    <script src="js/gen.js"></script>
+</body>
+</html>
