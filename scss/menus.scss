@@ -1,0 +1,88 @@
+// main menu styling
+#menulable{
+    color: white;
+    margin-right: 20px;
+    font-size: 1.5em;
+    @include mQ ($xl){
+        font-size: 2.5em;
+    }
+
+}
+nav{
+    width: 100vw;
+    height: 100vh;
+    z-index: $layer3;
+    position: fixed;
+    left: 0;
+    transition: left 0.8s ease;
+    .menu{
+        padding:  0 50px;
+        background: $purple;
+        height: 100vh;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        @include mQ ($md){
+            padding: 0 150px;
+        }
+        #purple-bar{
+            background: $purple;
+            height: 12vh;
+        }
+        .accordion{
+            @include mQ ($md) {
+                padding-top: 10vh;
+            }
+        }
+    }
+    .screen{
+        background: rgba(255, 255, 255, 0.5);
+        height: 100vh;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        li{
+            padding: 0;
+        }
+    }
+    a{
+        color: white;
+        &:hover{
+            color: $yellow;
+            text-decoration: none;
+        }
+    }
+    hr{
+        border-top: 1px solid white;
+    }
+    
+}
+.chapter-heading{
+    padding: 5px 0px;
+    a {
+        display: flex;
+        align-items: center;
+        span{
+            font-size: 1.5em;
+            margin-right: 20px;
+        }
+    }
+    a, span.expand{
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.5s ease;
+        font-size: 1.5em;
+        &:hover{
+            color: white;
+            font-weight: 700;
+        }
+    }
+    span.expand{
+        font-size: 1.5em;      
+    }
+}

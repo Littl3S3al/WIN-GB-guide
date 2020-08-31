@@ -12,10 +12,11 @@ window.addEventListener('load', () => {
     const goToZero = setInterval(() => {
         stripes[i].classList.add('zero-height');
         i++;
-        if(i  > stripes.length){
+        if(i  === 5){
             clearInterval(goToZero);
         }
     }, 100);
+    
     setTimeout(() => {
         body.classList.remove('no-vertical-scroll');
         loadScrn.classList.add('d-none');

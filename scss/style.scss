@@ -1,20 +1,21 @@
 @import 'variables';
 @import 'mixins';
+@import 'menus';
+@import 'loading';
 
 html{
     max-width: 100vw;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    
 }
-.no-vertical-scroll{
-    max-height: 100vh;
-    overflow-y: hidden;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    &::-webkit-scrollbar{
-        display: none;
-    }
+body{
+    font-size: 1em;
+    font-family: 'Nunito', sans-serif;
+}
+
+// font styles
+h1{
+    font-weight: 700;
 }
 
 // basic styles
@@ -32,6 +33,28 @@ html{
 }
 .purple{
     background: $purple;
+}
+
+// resuable general styles
+.no-vertical-scroll{
+    max-height: 100vh;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+.invis-fade{
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+.offscreen {
+    left: 100vw;
+    transition: left 0.8s ease;
+}
+.white-outline{
+    border: 2px solid white;
 }
 
 // buttons
@@ -69,52 +92,14 @@ section{
     min-height: 100vh;
 }
 
-// loading section
-.load{
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    z-index: 1000;
-    padding: 0;
-}
-#stripes{
-    div{
-        height: 100vh;
-        width: Calc(100vw/5);
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        top: 0;
-        z-index: 1000;
-    }
-}
-#loading{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    color: white;
-    z-index: 2000;
-    transition: opacity 0.2s ease-out;
-}
-
-.zero-height{
-    animation: striping 0.5s forwards ease;
-}
-
-
-@keyframes striping {
-    from{height: 100vh}
-    to{height: 0vh}
-}
-
 // page fixtures
 header{
     position: fixed;
     top: 0;
     padding: 10px!important;
+    z-index: $layer2;
+    background-color: rgba(255, 255, 255, 1);
+    transition: background-color 0.5s ease;
     img{
         width: 40vw;
         @include mQ ($md) {
@@ -136,3 +121,51 @@ header{
     bottom: 0;
     background: yellow;
 }
+
+// landing & closing section stlying
+$deviceWidth: 32vw;
+$deviceHeight: $deviceWidth/1.33;
+$deviceSpace: 50vw - $deviceWidth;
+
+$deviceWidthMax: 20vw;
+$deviceHeightMax: $deviceWidthMax/1.33;
+
+
+.min-screen{
+    width: $deviceWidth;
+    height: $deviceHeight;
+    border: 3px solid $med-grey;
+    display: inline-block;
+    background: $light-grey;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 2px 4px;
+    @include mQ ($xl){
+        width: $deviceWidthMax;
+        height: $deviceHeightMax; 
+        border-radius: 20px;
+        padding: 10px 20px;  
+        border: 5px solid $med-grey;
+    }
+}
+.min-min-screen{
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+#landingText{
+    padding-right: $deviceSpace;
+    @include mQ ($xl){
+        padding-right: 0;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+    }
+}
+#beginBtn{
+    margin-top: 10px;
+    @include mQ ($xl){
+        margin-top: 50px;
+    }
+}
+
