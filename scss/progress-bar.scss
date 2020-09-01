@@ -1,0 +1,64 @@
+#progress{
+    position: fixed;
+    bottom: 3vh;
+    z-index: $layer4;
+}
+
+.line-container { 
+    display: flex;
+    width: 100%;
+    
+    .progress-line {
+          position: relative;
+          margin: 0 auto;
+          border-radius: 10px;
+          width: 90%;
+          background: grey;
+          height: 5px;
+          z-index: -1;
+          display: flex;
+          justify-content: space-between;
+  
+        .progress {
+            position: absolute;
+            width: 75%;
+            height: 100%;
+            background: black;
+            transition: width 1s ease-in-out;
+        }
+    }   
+      
+    .status {
+        position: relative;
+        top: -19px;
+  
+        .dot {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            color: white;
+            border: 5px solid grey;
+            cursor: pointer;
+               
+            &.current {
+                background: white;
+                color: white;
+                border: 5px solid black;
+            }
+              
+            &.completed {
+                position: relative;
+                background: black;
+                border: 5px solid black;
+                color: white;
+              }
+  
+        }
+            
+      }
+     
+  }

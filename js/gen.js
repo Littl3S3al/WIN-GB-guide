@@ -8,7 +8,7 @@ const mainMenu = document.querySelector('nav');
 const mainMenuLinks = mainMenu.querySelectorAll('a');
 const mainScreen = document.querySelector('#mainScreen');
 const menuLable = document.querySelector('#menulable');
-let menuOpen = false;
+
 
 const beginBtn = document.querySelector('#beginBtn');
 
@@ -33,3 +33,17 @@ const removeClass = (array, cssClass) => {
 if(window.innerWidth > 992){
     addClass([mainMenuBtn, progressMenuBtn, langBtn, beginBtn], 'btn-lg')
 }
+
+
+
+
+// remove vertical scroll from body
+const removeScroll = () => {
+    document.body.classList.add('modal-open');
+}
+
+// add vertical scroll to body
+const addScroll = () => {
+    document.body.classList.remove('modal-open');
+}
+

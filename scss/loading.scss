@@ -3,6 +3,7 @@
     height: 100vh;
     width: 100vw;
     position: fixed;
+    top: 0;
     z-index: 1000;
     padding: 0;
 }
@@ -15,7 +16,7 @@
         padding: 0;
         position: absolute;
         top: 0;
-        z-index: $layer1;
+        z-index: $front;
     }
 }
 #loading{

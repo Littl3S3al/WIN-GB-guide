@@ -9,11 +9,17 @@
   }
 }
 
+i.ex {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
 nav {
   width: 100vw;
   height: 100vh;
   z-index: 150;
   position: fixed;
+  top: 0;
   left: 0;
   transition: left 0.8s ease;
 }
@@ -94,6 +100,7 @@ nav hr {
   height: 100vh;
   width: 100vw;
   position: fixed;
+  top: 0;
   z-index: 1000;
   padding: 0;
 }
@@ -106,7 +113,7 @@ nav hr {
   padding: 0;
   position: absolute;
   top: 0;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 #loading {
@@ -132,19 +139,89 @@ nav hr {
     height: 0vh;
   }
 }
+#progress {
+  position: fixed;
+  bottom: 3vh;
+  z-index: 140;
+}
+
+.line-container {
+  display: flex;
+  width: 100%;
+}
+.line-container .progress-line {
+  position: relative;
+  margin: 0 auto;
+  border-radius: 10px;
+  width: 90%;
+  background: grey;
+  height: 5px;
+  z-index: -1;
+  display: flex;
+  justify-content: space-between;
+}
+.line-container .progress-line .progress {
+  position: absolute;
+  width: 75%;
+  height: 100%;
+  background: black;
+  transition: width 1s ease-in-out;
+}
+.line-container .status {
+  position: relative;
+  top: -19px;
+}
+.line-container .status .dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  color: white;
+  border: 5px solid grey;
+  cursor: pointer;
+}
+.line-container .status .dot.current {
+  background: white;
+  color: white;
+  border: 5px solid black;
+}
+.line-container .status .dot.completed {
+  position: relative;
+  background: black;
+  border: 5px solid black;
+  color: white;
+}
+
 html {
-  max-width: 100vw;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
   font-size: 1em;
   font-family: "Nunito", sans-serif;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
 }
 
 h1 {
   font-weight: 700;
+}
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 4em;
+  }
+}
+
+h1.small {
+  font-size: 1em;
+}
+@media only screen and (min-width: 992px) {
+  h1.small {
+    font-size: 2em;
+  }
 }
 
 .navy {
@@ -168,7 +245,6 @@ h1 {
 }
 
 .no-vertical-scroll {
-  max-height: 100vh;
   overflow-y: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -189,6 +265,15 @@ h1 {
 
 .white-outline {
   border: 2px solid white;
+}
+
+.spacer {
+  height: 20vh;
+}
+@media only screen and (min-width: 992px) {
+  .spacer {
+    height: 10vh;
+  }
 }
 
 .btn {
@@ -254,10 +339,13 @@ header #menus button {
   margin-left: 10px;
 }
 
-#progress {
-  position: fixed;
-  bottom: 0;
-  background: yellow;
+#landing {
+  margin-top: 5vh;
+}
+@media only screen and (min-width: 1200px) {
+  #landing {
+    margin-top: 0;
+  }
 }
 
 .min-screen {
@@ -284,6 +372,20 @@ header #menus button {
   width: 100%;
   height: 100%;
   background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.min-min-screen a.number {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  text-decoration: none;
+  justify-content: center;
+}
+.min-min-screen a.number:hover {
+  opacity: 1;
 }
 
 #landingText {
@@ -299,12 +401,91 @@ header #menus button {
 }
 
 #beginBtn {
-  margin-top: 10px;
+  margin-top: 0;
 }
 @media only screen and (min-width: 1200px) {
   #beginBtn {
     margin-top: 50px;
   }
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-decoration: none;
+}
+.number span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #4d4d4d;
+  color: white;
+  font-weight: 700;
+  width: 100px;
+  height: 100px;
+  font-size: 6em;
+}
+@media only screen and (min-width: 1200px) {
+  .number span {
+    width: 150px;
+    height: 150px;
+    font-size: 8em;
+  }
+}
+
+.chapter-text {
+  background: #4d4d4d;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  transition: left 0.5s ease;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  color: white;
+  padding: 20px 0;
+}
+.chapter-text::-webkit-scrollbar {
+  display: none;
+}
+@media only screen and (min-width: 1200px) {
+  .chapter-text {
+    width: 65vw;
+    padding: 100px;
+    font-size: 1.5em;
+  }
+}
+
+.chapter-intro {
+  transition: all 0.5s ease;
+  left: 0;
+}
+@media only screen and (min-width: 1200px) {
+  .chapter-intro {
+    height: 100vh;
+  }
+}
+
+.chapter-image {
+  transition: all 0.5s ease;
+  left: 0;
+}
+
+.placeholder {
+  background: #b3b3b3;
+  width: 80%;
+  height: 70vh;
+  margin: 20px 10%;
+}
+
+.move-left {
+  transition: all 0.5s ease;
+  left: 65vw;
 }
 
 /*# sourceMappingURL=style.css.map */

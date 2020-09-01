@@ -1,6 +1,6 @@
 
 
-
+let menuOpen = false;
 
 
 // open main menu
@@ -14,8 +14,9 @@ const openMain = () => {
     };
 
     if(!menuOpen){
-        // stop body scrolling
-        body.classList.add('no-vertical-scroll');
+
+        removeScroll();
+        
         // hide buttons and reveal menu
         buttons.forEach(button => {
             button.style.opacity = 0;
@@ -25,7 +26,7 @@ const openMain = () => {
         }, 500);
         removeClass([mainMenu], 'offscreen');
         // change menu bars to times
-        mainMenuBtn.innerHTML = `<i class="fas fa-times"></i>`;
+        mainMenuBtn.innerHTML = `<i class="ex fas fa-times"></i>`;
 
         // give menubtn outline
         mainMenuBtn.classList.add('white-outline');
@@ -36,7 +37,8 @@ const openMain = () => {
         menuOpen = true;
     } else {
         // allow scrolling again
-        body.classList.remove('no-vertical-scroll');
+        addScroll();
+
         // reveal buttons and hide menu
         buttons.forEach(button => {
             button.style.opacity = 1;
