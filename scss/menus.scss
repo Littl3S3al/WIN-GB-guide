@@ -21,7 +21,7 @@ nav{
     left: 0;
     transition: left 0.8s ease;
     .menu{
-        padding:  0 50px;
+        padding:  0 10px;
         background: $purple;
         height: 100vh;
         overflow-y: scroll;
@@ -31,7 +31,7 @@ nav{
             display: none;
         }
         @include mQ ($md){
-            padding: 0 150px;
+            padding: 0 50px 0 100px;
         }
         #purple-bar{
             background: $purple;
@@ -51,7 +51,14 @@ nav{
         list-style: none;
         padding: 0;
         li{
-            padding: 0;
+            padding: 5px 0 5px 50px;
+            color: white;
+            transition: all 0.5s ease;
+            &:hover{
+                color: $yellow;
+                text-decoration: none;
+                cursor: pointer;
+            }
         }
     }
     a{
@@ -67,10 +74,20 @@ nav{
     
 }
 .chapter-heading{
-    padding: 5px 0px;
+    margin: 5px 10px 20px 0;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    @include mQ ($md) {
+        margin: 5px 10px 5px 0;
+        align-items: center;
+    }
     a {
         display: flex;
-        align-items: center;
+        align-items: top;
+        @include mQ ($md) {
+            align-items: center;
+        }
         span{
             font-size: 1.5em;
             margin-right: 20px;
@@ -81,10 +98,10 @@ nav{
         cursor: pointer;
         text-decoration: none;
         transition: all 0.5s ease;
-        font-size: 1.5em;
+        font-size: 1.2em;
+        font-weight: 700;
         &:hover{
-            color: white;
-            font-weight: 700;
+            color: $yellow
         }
     }
     span.expand{

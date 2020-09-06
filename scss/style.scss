@@ -66,10 +66,7 @@ h1.small{
     border: 2px solid white;
 }
 .spacer{
-    height: 20vh;
-    @include mQ ($lg){
-        height: 10vh;
-    }
+    height: 10vh;
 }
 
 // buttons
@@ -79,6 +76,9 @@ h1.small{
 .btn-light{
     background: $light-grey;
     color: white;
+}
+.btn-dark{
+    background: $dark-grey!important;
 }
 .btn-secondary{
     background: $purple;
@@ -95,6 +95,22 @@ h1.small{
         color: white;
         border-color: $yellow!important;
         outline-color: $yellow!important;
+    }
+}
+.btn-primary{
+    background: $teal;
+    &:hover, &:focus, &:active{
+        background: $teal-hover;
+        border-color: $teal!important;
+        outline-color: $teal!important;
+    }
+}
+.btn-danger{
+    background: $red;
+    &:hover, &:focus, &:active{
+        background: $red-hover;
+        border-color: $red!important;
+        outline-color: $red!important;
     }
 }
 .btn-lg{
@@ -130,19 +146,32 @@ header{
         }
     }
 }
+.btn-next{
+    display: none;
+    @include mQ ($md) {
+        display: inline-block;
+    }
+}
 
 
 
 // landing & closing section stlying
-$deviceWidth: 32vw;
+$deviceWidth: 40vw;
 $deviceHeight: $deviceWidth/1.33;
 $deviceSpace: 50vw - $deviceWidth;
+
+$deviceWidthMed: 33vw;
+$deviceHeightMed: $deviceWidthMed/1.33;
+$deviceSpaceMed: 50vw - $deviceWidthMed;
 
 $deviceWidthMax: 20vw;
 $deviceHeightMax: $deviceWidthMax/1.33;
 
 #landing{
-    margin-top: 5vh;
+    margin-top: 8vh;
+    @include mQ ($md) {
+        margin-top: 4vh;
+    }
     @include mQ ($xl) {
         margin-top: 0;
     }
@@ -157,6 +186,10 @@ $deviceHeightMax: $deviceWidthMax/1.33;
     border-radius: 10px;
     padding: 5px 10px;
     margin: 2px 4px;
+    @include mQ ($md) {
+        width: $deviceWidthMed;
+        height: $deviceHeightMed;
+    }
     @include mQ ($xl){
         width: $deviceWidthMax;
         height: $deviceHeightMax; 
@@ -173,14 +206,18 @@ $deviceHeightMax: $deviceWidthMax/1.33;
     align-items: center;
     justify-content: center;
     a.number{
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: opacity 1s ease;
-        text-decoration: none;
-        justify-content: center;
-        &:hover{
-            opacity: 1;
+        display: none;
+        @include mQ ($xl) {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease;
+            text-decoration: none;
+            justify-content: center;
+            &:hover{
+                opacity: 1;
+            }
         }
     }
 }
@@ -188,6 +225,9 @@ $deviceHeightMax: $deviceWidthMax/1.33;
 
 #landingText{
     padding-right: $deviceSpace;
+    @include mQ ($md) {
+        padding-right: $deviceSpaceMed;
+    }
     @include mQ ($xl){
         padding-right: 0;
         display: flex;
@@ -217,8 +257,8 @@ $deviceHeightMax: $deviceWidthMax/1.33;
         background: $dark-grey;
         color: white;
         font-weight: 700;
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
         font-size: 6em;
         @include mQ ($xl){
             width: 150px;
@@ -238,11 +278,12 @@ $deviceHeightMax: $deviceWidthMax/1.33;
     top: 0;
     left: -100vw;
     transition: left 0.5s ease;
+    color: white;
+    padding: 20px 0;
+    scroll-behavior: smooth;
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    color: white;
-    padding: 20px 0;
     &::-webkit-scrollbar{
         display: none;
     }
@@ -255,8 +296,15 @@ $deviceHeightMax: $deviceWidthMax/1.33;
 .chapter-intro{
     transition: all 0.5s ease;
     left: 0;
+    margin-bottom: 50px;
+    @include mQ ($md) {
+        padding-right: 10%;
+    }
+    @include mQ ($lg) {
+        padding-right: 30%;
+    }
     @include mQ ($xl) {
-        height: 100vh;
+        padding-right: 0;
     }
 }
 .chapter-image{
@@ -265,12 +313,35 @@ $deviceHeightMax: $deviceWidthMax/1.33;
 }
 .placeholder{
     background: $light-grey;
-    width: 80%;
+    width: 100%;
     height: 70vh;
-    margin: 20px 10%;
+    margin: 20px 0;
+    @include mQ ($xl) {
+        margin-left: 5%;
+        width: 90%;
+    }
 }
 
 .move-left{
     transition: all 0.5s ease;
     left: 65vw;
+}
+.chapter-buttons, .open-chapter-buttons{
+    transition: opacity 1s ease;
+    opacity: 1;
+}
+.open-chapter-buttons{
+    button{
+        margin-top: 10px;
+    }
+    .navigationBtns{
+        position: absolute;
+        top: 50vh;
+    }
+}
+.hidden-buttons{
+    transition: opacity 1s ease;
+    height: 0;
+    opacity: 0;
+    overflow-y: hidden;
 }

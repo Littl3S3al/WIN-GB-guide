@@ -11,8 +11,10 @@ $dark-grey: #4d4d4d;
 
 
 // highlight colours
+$red-hover: lighten($red, 10%);
 $yellow-hover: lighten($yellow, 10%);
 $purple-hover: lighten($purple, 10%);
+$teal-hover: lighten($teal, 10%);
 
 // breakpoints
 $sm: 576px;

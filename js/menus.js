@@ -1,7 +1,46 @@
 
-
+// VARIABLES
 let menuOpen = false;
 
+// FOR EACH INTITAL FUNCTIONS
+
+// populating the menu with the chapter content taken from html script const chapterContent
+chapterContent.forEach(chapter => {
+    menuContent.innerHTML += `
+        <div class="chapter col-12">
+
+            <div class="chapter-heading">
+                <a href="#chapter-${chapter.number}" class="menu-link" data-target="chapter-${chapter.number}"><span>0${chapter.number}</span> ${chapter.chapter}</a>
+
+                <span class="expand" data-toggle="collapse" data-target="#collapse${chapter.number}" aria-expanded="true" aria-controls="collapse${chapter.number}">
+                +
+                </span>
+            </div>
+
+            <div id="collapse${chapter.number}" class="chapter-content collapse" aria-labelledby="${chapter.chapter}" data-parent="#main-menu-accordian">
+                <ul id="list-${chapter.number}">
+                </ul>
+            </div>
+        </div>
+    `;
+})
+chapterContent.forEach(chapter => {
+    let i = 1;
+    chapter.concepts.forEach(concept => {
+        document.querySelector(`#list-${chapter.number}`).innerHTML += `
+            <li class="chapter-shortcut" data-target="chapter-${chapter.number}" data-shortcut="section-${i}">${concept}</li>
+        `;
+        i++;
+    })
+})
+
+// running auto functions
+addClass([mainMenuBtn, progressMenuBtn, langBtn, logo], 'invis-fade');
+
+
+
+
+// FUNCTIONS
 
 // open main menu
 const openMain = () => {
@@ -15,6 +54,7 @@ const openMain = () => {
 
     if(!menuOpen){
 
+        // remove scrolling
         removeScroll();
         
         // hide buttons and reveal menu
@@ -58,8 +98,7 @@ const openMain = () => {
     }
 }
 
-// running auto functions
-addClass([mainMenuBtn, progressMenuBtn, langBtn, logo], 'invis-fade');
+
 
 
 // event listeners
@@ -70,7 +109,7 @@ mainScreen.addEventListener('click', () => {
     openMain();
 })
 mainMenu.addEventListener('click', e => {
-    if(e.target.tagName === 'A'){
+    if(e.target.tagName === 'A' || e.target.tagName === 'LI'){
         openMain();
     }
 })

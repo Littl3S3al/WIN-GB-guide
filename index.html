@@ -26,7 +26,7 @@
     <div class="load container-fluid">
         <div id="stripes">
             <div class="stripe navy"></div><div class="stripe red" style="left: 20vw"></div><div class="stripe teal" style="left: 40vw"></div><div class="stripe yellow" style="left: 60vw"></div><div class="stripe purple" style="left: 80vw"></div>
-        </div>
+        </div>${}
 
         <div id="loading" class="d-flex justify-content-center align-items-center">
             <img src="assets/loader.gif" width="80px">
@@ -67,118 +67,11 @@
     <!-- main menu -->
     <nav class="container-fluid offscreen">
         <div class="row">
-            <div id="mainScreen" class="d-none d-md-block col-8 screen"></div>
-            <div class="col-12 col-md-4 menu"> 
+            <div id="mainScreen" class="d-none d-md-block col-md-4 col-xl-8 screen"></div>
+            <div class="col-12 col-md-8 col-xl-4 menu"> 
                 <div id="purple-bar" class="row sticky-top"></div>
                 <div class="accordion row" id="main-menu-accordian">
-                    <!-- one -->
-                    <div class="chapter col-12">
-                        <div class="chapter-heading d-flex justify-content-between align-items-center">
-                            <a href="#chapter-1"><span>01</span> Chapter one</a>
-                            <span class="expand" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                            +
-                            </span>
-                        </div>
-
-                        <div id="collapse1" class="chapter-content collapse" aria-labelledby="chapter 1" data-parent="#main-menu-accordian">
-                            <ul>
-                                <li><a href="#">concept one</a></li>
-                                <li><a href="#">concept two</a></li>
-                                <li><a href="#">concept three</a></li>
-                                <li><a href="#">chapter summary</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- two -->
-                    <div class="chapter col-12">
-                        <div class="chapter-heading d-flex justify-content-between align-items-center">
-                            <a href="#two"><span>02</span> Chapter two</a>
-                            <span class="expand" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                            +
-                            </span>
-                        </div>
-
-                        <div id="collapse2" class="chapter-content collapse" aria-labelledby="chapter 2" data-parent="#main-menu-accordian">
-                            <ul>
-                                <li><a href="#">concept one</a></li>
-                                <li><a href="#">concept two</a></li>
-                                <li><a href="#">concept three</a></li>
-                                <li><a href="#">chapter summary</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- three -->
-                    <div class="chapter col-12">
-                        <div class="chapter-heading d-flex justify-content-between align-items-center">
-                            <a href="#three"><span>03</span> Chapter three</a>
-                            <span class="expand" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
-                            +
-                            </span>
-                        </div>
-
-                        <div id="collapse3" class="chapter-content collapse" aria-labelledby="chapter 3" data-parent="#main-menu-accordian">
-                            <ul>
-                                <li><a href="#">concept one</a></li>
-                                <li><a href="#">concept two</a></li>
-                                <li><a href="#">concept three</a></li>
-                                <li><a href="#">chapter summary</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- four -->
-                    <div class="chapter col-12">
-                        <div class="chapter-heading d-flex justify-content-between align-items-center">
-                            <a href="#one"><span>04</span> Chapter four</a>
-                            <span class="expand" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
-                            +
-                            </span>
-                        </div>
-
-                        <div id="collapse4" class="chapter-content collapse" aria-labelledby="chapter 4" data-parent="#main-menu-accordian">
-                            <ul>
-                                <li><a href="#">concept one</a></li>
-                                <li><a href="#">concept two</a></li>
-                                <li><a href="#">concept three</a></li>
-                                <li><a href="#">chapter summary</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- five -->
-                    <div class="chapter col-12">
-                        <div class="chapter-heading d-flex justify-content-between align-items-center">
-                            <a href="#one"><span>05</span> Chapter five</a>
-                            <span class="expand" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
-                            +
-                            </span>
-                        </div>
-
-                        <div id="collapse5" class="chapter-content collapse" aria-labelledby="chapter 5" data-parent="#main-menu-accordian">
-                            <ul>
-                                <li><a href="#">concept one</a></li>
-                                <li><a href="#">concept two</a></li>
-                                <li><a href="#">concept three</a></li>
-                                <li><a href="#">chapter summary</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- six -->
-                    <div class="chapter col-12">
-                        <div class="chapter-heading d-flex justify-content-between align-items-center">
-                            <a href="#six"><span>06</span> Chapter six</a>
-                            <span class="expand" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
-                            +
-                            </span>
-                        </div>
-
-                        <div id="collapse6" class="chapter-content collapse" aria-labelledby="chapter 6" data-parent="#main-menu-accordian">
-                            <ul>
-                                <li><a href="#">concept one</a></li>
-                                <li><a href="#">concept two</a></li>
-                                <li><a href="#">concept three</a></li>
-                                <li><a href="#">chapter summary</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                   
                 </div> <!--accordian end-->
                 <hr>
                 <ul>
@@ -191,7 +84,7 @@
         </div>
     </nav>
 
-    <!-- progress menu -->
+    <!-- progress bar at the bottom -->
     <div id="progress" class="container-fluid d-none d-xl-block">
         <div class="row">
             <div class="col-10 offset-1 col-xl-6">
@@ -250,27 +143,27 @@
                 </div>
                 <div class="min-screen">
                     <div class="min-min-screen">
-                        <a href="#two" class="number"><span>2.</span></a>
+                        <a href="#chapter-2" class="number"><span>2.</span></a>
                     </div>
                 </div>
                 <div class="min-screen">
                     <div class="min-min-screen">
-                        <a href="#three" class="number"><span>3.</span></a>
+                        <a href="#chapter-3" class="number"><span>3.</span></a>
                     </div>
                 </div>
                 <div class="min-screen">
                     <div class="min-min-screen">
-                        <a href="#four" class="number"><span>4.</span></a>
+                        <a href="#chapter-4" class="number"><span>4.</span></a>
                     </div>
                 </div>
                 <div class="min-screen">
                     <div class="min-min-screen">
-                        <a href="#five" class="number"><span>5.</span></a>
+                        <a href="#chapter-5" class="number"><span>5.</span></a>
                     </div>
                 </div>
                 <div class="min-screen">
                     <div class="min-min-screen">
-                        <a href="#six" class="number"><span>6.</span></a>
+                        <a href="#chapter-6" class="number"><span>6.</span></a>
                     </div>
                 </div>
             </div>
@@ -280,47 +173,50 @@
                     <h1>Gender<br>Balance<br>Guide</h1>
                     <h1 class="small">for Media</h1>
                     <br>
-                    <a href="#chapter-1" id="beginBtn" class="btn btn-primary">Begin <i class="fas fa-arrow-down"></i></a>
+                    <a href="#chapter-1" class="btn-next btn btn-primary">Begin <i class="fas fa-arrow-down"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
 
+    <!-- chapters -->
     <section id="chapter-1" class="container-fluid">
         <div class="spacer"></div>
         <div class="row">
+
+            <!-- chatper -->
             <div class="chapter-text" data-content="chapter-1">
                 <button class="btn btn-lg btn-dark close-chapter">close</button>
 
+                <h3 id="section-1">Section one</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, quo fugiat officiis rem beatae soluta, tenetur culpa laudantium voluptatibus minima odit cumque, sed sunt. Reiciendis voluptatem est aut aspernatur id!
-                    <div class="spacer"></div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia laudantium eum obcaecati dolore, quo iusto mollitia at, nam odio recusandae voluptatibus quos? Beatae nam autem error natus et quidem.
-                    <div class="spacer"></div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, quo fugiat officiis rem beatae soluta, tenetur culpa laudantium voluptatibus minima odit cumque, sed sunt. Reiciendis voluptatem est aut aspernatur id!
-                    <div class="spacer"></div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia laudantium eum obcaecati dolore, quo iusto mollitia at, nam odio recusandae voluptatibus quos? Beatae nam autem error natus et quidem.
-
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, quo fugiat officiis rem beatae soluta, tenetur culpa laudantium voluptatibus minima odit cumque, sed sunt. Reiciendis voluptatem est aut aspernatur id!
-                    <div class="spacer"></div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia laudantium eum obcaecati dolore, quo iusto mollitia at, nam odio recusandae voluptatibus quos? Beatae nam autem error natus et quidem.
-
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, quo fugiat officiis rem beatae soluta, tenetur culpa laudantium voluptatibus minima odit cumque, sed sunt. Reiciendis voluptatem est aut aspernatur id!
-
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia laudantium eum obcaecati dolore, quo iusto mollitia at, nam odio recusandae voluptatibus quos? Beatae nam autem error natus et quidem.
-
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, quo fugiat officiis rem beatae soluta, tenetur culpa laudantium voluptatibus minima odit cumque, sed sunt. Reiciendis voluptatem est aut aspernatur id!
-
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia laudantium eum obcaecati dolore, quo iusto mollitia at, nam odio recusandae voluptatibus quos? Beatae nam autem error natus et quidem.
-
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, quo fugiat officiis rem beatae soluta, tenetur culpa laudantium voluptatibus minima odit cumque, sed sunt. Reiciendis voluptatem est aut aspernatur id!
-
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia laudantium eum obcaecati dolore, quo iusto mollitia at, nam odio recusandae voluptatibus quos? Beatae nam autem error natus et quidem.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex deleniti error non cumque iure voluptatum laboriosam quasi! Nesciunt minus aperiam quidem nulla eaque, eius accusamus error obcaecati hic cum asperiores.
                 </p>
+                <h3 id="section-2">Section two</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, architecto quo. Sit eum unde consectetur expedita vitae sequi perspiciatis, quidem ad deserunt velit. Saepe, error natus magni eum expedita consectetur.
+                </p>
+                <h3 id="section-3">Section three</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                </p>
+                <h3 id="section-4">Section four</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                </p>
+                <h3 id="section-5">Section five: infographic</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                </p>
+                <h3 id="section-6">Section six: quiz</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                </p>
+
             </div>
 
-            <div class="col-12 col-lg-4 chapter-intro" data-content="chapter-1">
+            <div class="col-12 col-md-10 offset-md-1 col-xl-4 offset-xl-0 chapter-intro" data-content="chapter-1">
                 <!-- chapter row -->
                 <div class="row m-xl-5">
                     <!-- number -->
@@ -330,48 +226,213 @@
                         </div>
                     </div>
                     <!-- chapter intro -->
-                    <div class="col-12 chapter-intro">
+                    <div class="col-12 chapter-intro-content">
                         <h2>Why gender balance is important</h2>
                         <p>
                             The reasons why media organisations and media professionals should be working to increase gender balance in their content.
                         </p>
                         <!-- chapter buttons -->
                         <div class="chapter-buttons">
-                            <button class="mb-3 btn btn-lg btn-danger read-it" data-target="chapter-1">
+                            <button class="mb-3 btn btn-danger read-it" data-target="chapter-1">
                                 read it
                             </button>
                             <br>
-                            <a href=""><span class="btn btn-warning"><i class="fas fa-question"></i> do the quiz</span></a>
-                            <a href=""><span class="btn btn-primary">infographic</span></a>
+                            <button class="chapter-shortcut btn btn-warning" data-target="chapter-1" data-shortcut="section-6"><i class="fas fa-question"></i> do the quiz</button>
+                            <button class="chapter-shortcut btn btn-primary" data-target="chapter-1" data-shortcut="section-5">infographic</button>
+                        </div>
+                        <!-- buttons which only appear when chapter opens -->
+                        <div class="open-chapter-buttons hidden-buttons">
+                            <button class="chapter-link btn btn-secondary" data-link="section-1">concept 1</button>
+                            <button class="chapter-link btn btn-secondary" data-link="section-2">concept 2</button>
+                            <button class="chapter-link btn btn-secondary" data-link="section-3">concept 3</button>
+                            <button class="chapter-link btn btn-secondary" data-link="section-4">concept 4</button>
+                            <button class="chapter-link btn btn-primary" data-link="section-5">infographic</button>
+                            <button class="chapter-link btn btn-warning" data-link="section-6">quiz</button>
+
+                            <br>
+
+                            <!-- next button -->
+                            <div class="navigationBtns">
+                                <!-- <a href="#landing" class="btn-next btn btn-light">Previous <i class="fas fa-arrow-up"></i></a> -->
+                                <a href="#chapter-2" class="btn-next btn btn-dark">Next <i class="fas fa-arrow-down"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div><!--row end-->
             </div>
 
-            <div class="col-12 col-lg-8 chapter-image" data-content="chapter-1">
+            <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-0 chapter-image" data-content="chapter-1">
                 <div class="placeholder"></div>
             </div>
         </div>
     </section>
 
-    <section id="two">
-        <p>two</p>
+    <section id="chapter-2" class="container-fluid">
+        <div class="spacer"></div>
+        <div class="row">
+
+            <!-- chatper -->
+            <div class="chapter-text" data-content="chapter-2">
+                <button class="btn btn-lg btn-dark close-chapter">close</button>
+
+                <h3 id="section-1">Section one</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex deleniti error non cumque iure voluptatum laboriosam quasi! Nesciunt minus aperiam quidem nulla eaque, eius accusamus error obcaecati hic cum asperiores.
+                </p>
+                <h3 id="section-2">Section two</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, architecto quo. Sit eum unde consectetur expedita vitae sequi perspiciatis, quidem ad deserunt velit. Saepe, error natus magni eum expedita consectetur.
+                </p>
+                <h3 id="section-3">Section three</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                </p>
+                <h3 id="section-4">Section four</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                </p>
+                <h3 id="section-5">Section five: infographic</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                </p>
+                <h3 id="section-6">Section six: quiz</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                </p>
+
+            </div>
+
+            <div class="col-12 col-md-10 offset-md-1 col-xl-4 offset-xl-0 chapter-intro" data-content="chapter-2">
+                <!-- chapter row -->
+                <div class="row m-xl-5">
+                    <!-- number -->
+                    <div class="col-12 text-left mb-3">
+                        <div class="number">
+                            <span>2.</span>
+                        </div>
+                    </div>
+                    <!-- chapter intro -->
+                    <div class="col-12 chapter-intro-content">
+                        <h2>How we stereotype in the media</h2>
+                        <p>
+                            What it means to ‘gender stereotype’. We need to understand the problem before we can fix it.
+                        </p>
+                        <!-- chapter buttons -->
+                        <div class="chapter-buttons">
+                            <button class="mb-3 btn btn-danger read-it" data-target="chapter-2">
+                                read it
+                            </button>
+                            <br>
+                            <button class="chapter-shortcut btn btn-warning" data-target="chapter-2" data-shortcut="section-6"><i class="fas fa-question"></i> do the quiz</button>
+                            <button class="chapter-shortcut btn btn-primary" data-target="chapter-2" data-shortcut="section-5">infographic</button>
+                        </div>
+                        <!-- buttons which only appear when chapter opens -->
+                        <div class="open-chapter-buttons hidden-buttons">
+                            <button class="chapter-link btn btn-secondary" data-link="section-1">concept 1</button>
+                            <button class="chapter-link btn btn-secondary" data-link="section-2">concept 2</button>
+                            <button class="chapter-link btn btn-secondary" data-link="section-3">concept 3</button>
+                            <button class="chapter-link btn btn-secondary" data-link="section-4">concept 4</button>
+                            <button class="chapter-link btn btn-primary" data-link="section-5">infographic</button>
+                            <button class="chapter-link btn btn-warning" data-link="section-6">quiz</button>
+
+                            <!-- next button -->
+                            <div class="navigationBtns">
+                                <a href="#chapter-1" class="btn-next btn btn-light">Previous <i class="fas fa-arrow-up"></i></a>
+                                <a href="#chapter-3" class="btn-next btn btn-dark">Next <i class="fas fa-arrow-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--row end-->
+            </div>
+
+            <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-0 chapter-image" data-content="chapter-2">
+                <div class="placeholder"></div>
+            </div>
+        </div>
     </section>
 
-    <section id="three">
-        <p>three</p>
-    </section>
+    <section id="chapter-3" class="container-fluid">
+        <div class="spacer"></div>
+        <div class="row">
 
-    <section id="four">
-        <p>four</p>
-    </section>
+            <!-- chatper -->
+            <div class="chapter-text" data-content="chapter-3">
+                <button class="btn btn-lg btn-dark close-chapter">close</button>
 
-    <section id="five">
-        <p>five</p>
-    </section>
+                <h3 id="section-1">Section one</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex deleniti error non cumque iure voluptatum laboriosam quasi! Nesciunt minus aperiam quidem nulla eaque, eius accusamus error obcaecati hic cum asperiores.
+                </p>
+                <h3 id="section-2">Section two</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, architecto quo. Sit eum unde consectetur expedita vitae sequi perspiciatis, quidem ad deserunt velit. Saepe, error natus magni eum expedita consectetur.
+                </p>
+                <h3 id="section-3">Section three</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                </p>
+                <h3 id="section-4">Section four</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                </p>
+                <h3 id="section-5">Section five: infographic</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                </p>
+                <h3 id="section-6">Section six: quiz</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                </p>
 
-    <section id="six">
-        <p>six</p>
+            </div>
+
+            <div class="col-12 col-md-10 offset-md-1 col-xl-4 offset-xl-0 chapter-intro" data-content="chapter-3">
+                <!-- chapter row -->
+                <div class="row m-xl-5">
+                    <!-- number -->
+                    <div class="col-12 text-left mb-3">
+                        <div class="number">
+                            <span>3.</span>
+                        </div>
+                    </div>
+                    <!-- chapter intro -->
+                    <div class="col-12 chapter-intro-content">
+                        <h2>Actions to improve gender balance</h2>
+                        <p>
+                            Practical suggestions to improve gender balance in content.
+                        </p>
+                        <!-- chapter buttons -->
+                        <div class="chapter-buttons">
+                            <button class="mb-3 btn btn-danger read-it" data-target="chapter-3">
+                                read it
+                            </button>
+                            <br>
+                            <button class="chapter-shortcut btn btn-warning" data-target="chapter-3" data-shortcut="section-6"><i class="fas fa-question"></i> do the quiz</button>
+                            <button class="chapter-shortcut btn btn-primary" data-target="chapter-3" data-shortcut="section-5">infographic</button>
+                        </div>
+                        <!-- buttons which only appear when chapter opens -->
+                        <div class="open-chapter-buttons hidden-buttons">
+                            <button class="chapter-link btn btn-secondary" data-link="section-1">concept 1</button>
+                            <button class="chapter-link btn btn-secondary" data-link="section-2">concept 2</button>
+                            <button class="chapter-link btn btn-secondary" data-link="section-3">concept 3</button>
+                            <button class="chapter-link btn btn-secondary" data-link="section-4">concept 4</button>
+                            <button class="chapter-link btn btn-primary" data-link="section-5">infographic</button>
+                            <button class="chapter-link btn btn-warning" data-link="section-6">quiz</button>
+
+                            <!-- next button -->
+                            <div class="navigationBtns">
+                                <a href="#chapter-2" class="btn-next btn btn-light">Previous <i class="fas fa-arrow-up"></i></a>
+                                <!-- <a href="#chapter-2" class="btn-next btn btn-dark">Next <i class="fas fa-arrow-down"></i></a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div><!--row end-->
+            </div>
+
+            <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-0 chapter-image" data-content="chapter-3">
+                <div class="placeholder"></div>
+            </div>
+        </div>
     </section>
 
     <!-- bootstrap js -->
@@ -383,6 +444,66 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+
+    <!-- chapter content -->
+    <script>
+        const chapterContent = [
+            {
+                number: 1, 
+                chapter: 'Why gender balance is important',
+                shortcuts: [
+                    {
+                        title: 'do the quiz',
+                        link: 'quiz'
+                    }
+                ],
+                concepts: [
+                    'Responsibility to promote equality and diversity',
+                    'Women are an untapped audience – it makes business sense',
+                    'Diversity of views makes for better content and products',
+                    'Sexism is bad for business',
+                    'infographic: summary',
+                    'do the quiz'
+                ]
+            },
+            {
+                number: 2,
+                chapter: 'How we stereotype in the media',
+                shortcuts: [
+                    {
+                        title: 'do the quiz',
+                        link: 'quiz'
+                    }
+                ],
+                concepts: [
+                    'Responsibility to promote equality and diversity',
+                    'Women are an untapped audience – it makes business sense',
+                    'Diversity of views makes for better content and products',
+                    'Sexism is bad for business',
+                    'infographic: summary',
+                    'do the quiz'
+                ]
+            }, 
+            {
+                number: 3,
+                chapter: 'Actions to improve gender balance',
+                shortcuts: [
+                    {
+                        title: 'do the quiz',
+                        link: 'quiz'
+                    }
+                ],
+                concepts: [
+                    'Responsibility to promote equality and diversity',
+                    'Women are an untapped audience – it makes business sense',
+                    'Diversity of views makes for better content and products',
+                    'Sexism is bad for business',
+                    'infographic: summary',
+                    'do the quiz'
+                ]
+            }
+        ]
     </script>
 
     <!-- scroll lock -->

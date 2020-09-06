@@ -24,7 +24,7 @@ nav {
   transition: left 0.8s ease;
 }
 nav .menu {
-  padding: 0 50px;
+  padding: 0 10px;
   background: #500878;
   height: 100vh;
   overflow-y: scroll;
@@ -36,7 +36,7 @@ nav .menu::-webkit-scrollbar {
 }
 @media only screen and (min-width: 768px) {
   nav .menu {
-    padding: 0 150px;
+    padding: 0 50px 0 100px;
   }
 }
 nav .menu #purple-bar {
@@ -57,7 +57,14 @@ nav ul {
   padding: 0;
 }
 nav ul li {
-  padding: 0;
+  padding: 5px 0 5px 50px;
+  color: white;
+  transition: all 0.5s ease;
+}
+nav ul li:hover {
+  color: #f2a900;
+  text-decoration: none;
+  cursor: pointer;
 }
 nav a {
   color: white;
@@ -71,11 +78,25 @@ nav hr {
 }
 
 .chapter-heading {
-  padding: 5px 0px;
+  margin: 5px 10px 20px 0;
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 768px) {
+  .chapter-heading {
+    margin: 5px 10px 5px 0;
+    align-items: center;
+  }
 }
 .chapter-heading a {
   display: flex;
-  align-items: center;
+  align-items: top;
+}
+@media only screen and (min-width: 768px) {
+  .chapter-heading a {
+    align-items: center;
+  }
 }
 .chapter-heading a span {
   font-size: 1.5em;
@@ -86,11 +107,11 @@ nav hr {
   cursor: pointer;
   text-decoration: none;
   transition: all 0.5s ease;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  font-weight: 700;
 }
 .chapter-heading a:hover, .chapter-heading span.expand:hover {
-  color: white;
-  font-weight: 700;
+  color: #f2a900;
 }
 .chapter-heading span.expand {
   font-size: 1.5em;
@@ -268,12 +289,7 @@ h1.small {
 }
 
 .spacer {
-  height: 20vh;
-}
-@media only screen and (min-width: 992px) {
-  .spacer {
-    height: 10vh;
-  }
+  height: 10vh;
 }
 
 .btn {
@@ -283,6 +299,10 @@ h1.small {
 .btn-light {
   background: #b3b3b3;
   color: white;
+}
+
+.btn-dark {
+  background: #4d4d4d !important;
 }
 
 .btn-secondary {
@@ -302,6 +322,24 @@ h1.small {
   color: white;
   border-color: #f2a900 !important;
   outline-color: #f2a900 !important;
+}
+
+.btn-primary {
+  background: #1f8da2;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background: #27b2cd;
+  border-color: #1f8da2 !important;
+  outline-color: #1f8da2 !important;
+}
+
+.btn-danger {
+  background: #b11116;
+}
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active {
+  background: #e0151c;
+  border-color: #b11116 !important;
+  outline-color: #b11116 !important;
 }
 
 .btn-lg {
@@ -339,8 +377,22 @@ header #menus button {
   margin-left: 10px;
 }
 
+.btn-next {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .btn-next {
+    display: inline-block;
+  }
+}
+
 #landing {
-  margin-top: 5vh;
+  margin-top: 8vh;
+}
+@media only screen and (min-width: 768px) {
+  #landing {
+    margin-top: 4vh;
+  }
 }
 @media only screen and (min-width: 1200px) {
   #landing {
@@ -349,14 +401,20 @@ header #menus button {
 }
 
 .min-screen {
-  width: 32vw;
-  height: 24.0601503759vw;
+  width: 40vw;
+  height: 30.0751879699vw;
   border: 3px solid #666666;
   display: inline-block;
   background: #b3b3b3;
   border-radius: 10px;
   padding: 5px 10px;
   margin: 2px 4px;
+}
+@media only screen and (min-width: 768px) {
+  .min-screen {
+    width: 33vw;
+    height: 24.8120300752vw;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .min-screen {
@@ -377,19 +435,30 @@ header #menus button {
   justify-content: center;
 }
 .min-min-screen a.number {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease;
-  text-decoration: none;
-  justify-content: center;
+  display: none;
 }
-.min-min-screen a.number:hover {
-  opacity: 1;
+@media only screen and (min-width: 1200px) {
+  .min-min-screen a.number {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    text-decoration: none;
+    justify-content: center;
+  }
+  .min-min-screen a.number:hover {
+    opacity: 1;
+  }
 }
 
 #landingText {
-  padding-right: 18vw;
+  padding-right: 10vw;
+}
+@media only screen and (min-width: 768px) {
+  #landingText {
+    padding-right: 17vw;
+  }
 }
 @media only screen and (min-width: 1200px) {
   #landingText {
@@ -423,8 +492,8 @@ header #menus button {
   background: #4d4d4d;
   color: white;
   font-weight: 700;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   font-size: 6em;
 }
 @media only screen and (min-width: 1200px) {
@@ -444,11 +513,12 @@ header #menus button {
   top: 0;
   left: -100vw;
   transition: left 0.5s ease;
+  color: white;
+  padding: 20px 0;
+  scroll-behavior: smooth;
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  color: white;
-  padding: 20px 0;
 }
 .chapter-text::-webkit-scrollbar {
   display: none;
@@ -464,10 +534,21 @@ header #menus button {
 .chapter-intro {
   transition: all 0.5s ease;
   left: 0;
+  margin-bottom: 50px;
+}
+@media only screen and (min-width: 768px) {
+  .chapter-intro {
+    padding-right: 10%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .chapter-intro {
+    padding-right: 30%;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .chapter-intro {
-    height: 100vh;
+    padding-right: 0;
   }
 }
 
@@ -478,14 +559,40 @@ header #menus button {
 
 .placeholder {
   background: #b3b3b3;
-  width: 80%;
+  width: 100%;
   height: 70vh;
-  margin: 20px 10%;
+  margin: 20px 0;
+}
+@media only screen and (min-width: 1200px) {
+  .placeholder {
+    margin-left: 5%;
+    width: 90%;
+  }
 }
 
 .move-left {
   transition: all 0.5s ease;
   left: 65vw;
+}
+
+.chapter-buttons, .open-chapter-buttons {
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+.open-chapter-buttons button {
+  margin-top: 10px;
+}
+.open-chapter-buttons .navigationBtns {
+  position: absolute;
+  top: 50vh;
+}
+
+.hidden-buttons {
+  transition: opacity 1s ease;
+  height: 0;
+  opacity: 0;
+  overflow-y: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -16,6 +16,8 @@ window.addEventListener('load', () => {
             clearInterval(goToZero);
         }
     }, 100);
+
+    window.scrollTo({top: 0});
     
     setTimeout(() => {
         body.classList.remove('no-vertical-scroll');
