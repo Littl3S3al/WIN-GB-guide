@@ -4,19 +4,32 @@
 @import 'loading';
 @import 'progress-bar';
 
+
+// fonts
+@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=94e59f4e-16c2-44e3-81d2-766aa67b34fd&fontids=1475512,1475536");
+@font-face{
+    font-family:"Avenir LT W04_45 Book1475512";
+    src:url("../Fonts/1475512/fe2d00d9-aadd-40f7-a144-22a6f695aa8f.woff2") format("woff2"),url("../Fonts/1475512/c3795fc9-e264-4795-9a19-b57086aa6f7b.woff") format("woff");
+}
+@font-face{
+    font-family:"Avenir LT W04_65 Medium1475536";
+    src:url("../Fonts/1475536/7839a002-2019-46e4-8db8-c8335356ceee.woff2") format("woff2"),url("../Fonts/1475536/28433854-a1b7-4a30-b6a4-10c3a5c75494.woff") format("woff");
+}
+
+
+
+
 html{
     scroll-behavior: smooth;
 }
 body{
     font-size: 1em;
-    font-family: 'Nunito', sans-serif;
-    max-width: 100vw!important;
-    overflow-x: hidden!important;
+    font-family:"Avenir LT W04_45 Book1475512";
 }
 
 // font styles
 h1{
-    font-weight: 700;
+    font-family:"Avenir LT W04_65 Medium1475536";
     @include mQ ($lg) {
         font-size: 4em;
     }
@@ -271,7 +284,7 @@ $deviceHeightMax: $deviceWidthMax/1.33;
 // chapter general styles
 .chapter-text{
     background: $dark-grey;
-    height: 100vh;
+    height: 100vh!important;
     width: 100vw;
     z-index: $front;
     position: fixed;
@@ -279,18 +292,29 @@ $deviceHeightMax: $deviceWidthMax/1.33;
     left: -100vw;
     transition: left 0.5s ease;
     color: white;
-    padding: 20px 0;
     scroll-behavior: smooth;
     overflow-y: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    &::-webkit-scrollbar{
-        display: none;
-    }
+    // -ms-overflow-style: none;
+    // scrollbar-width: none;
+    // &::-webkit-scrollbar{
+    //     display: none;
+    // }
     @include mQ ($xl) {
         width: 65vw;
-        padding: 100px;
         font-size: 1.5em;
+    }
+    // inside the chapter styles
+    .close-section{
+        padding: 20px;
+    }
+    .close-chapter{
+        border: 2px white solid;
+    }
+    .chapter-text-inner{
+        padding: 20px;
+        @include mQ ($lg) {
+            padding: 20px 100px;
+        }
     }
 }
 .chapter-intro{

@@ -2,6 +2,7 @@
 const chapters = document.querySelectorAll('.chapter-text');
 const intros = document.querySelectorAll('.chapter-intro');
 const covers = document.querySelectorAll('.chapter-image');
+const closeChapterBtns = document.querySelectorAll('.close-chapter');
 let whichChapter;
 
 
@@ -35,7 +36,8 @@ const openChapter = (current) => {
         hideShowButtons(intro.querySelector('.chapter-buttons'));
         hideShowButtons(intro.querySelector('.open-chapter-buttons'));
         addClass([mainMenuBtn, progressMenuBtn, langBtn], 'btn-dark');
-    }, 500)
+    }, 500);
+    
     // stop body scroll
     removeScroll();
 
@@ -86,13 +88,10 @@ document.body.addEventListener('click', (e) => {
         let current = e.target.dataset.target;
         openChapter(current);
     }
-    // onclick function for close chapter button
-    if(e.target.classList.contains('close-chapter')){
-        closeChapter();
-    }
     // onclick function for chapter shortcut buttons as well as menu shortcut links
     if(e.target.classList.contains('chapter-shortcut')){
         if(whichChapter !== e.target.dataset.target && whichChapter){
+            console.log('close');
             closeChapter();
         };
         let current = e.target.dataset.target;
@@ -121,4 +120,12 @@ document.body.addEventListener('click', (e) => {
             closeChapter();
         };
     }
+})
+
+// event listener for close buttons
+// this wasn't working in the usual way so I had to set up individual event listeners
+closeChapterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        closeChapter();
+    })
 })
