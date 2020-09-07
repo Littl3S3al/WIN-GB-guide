@@ -129,7 +129,7 @@ nav hr {
 
 #stripes div {
   height: 100vh;
-  width: calc(100vw/5);
+  width: calc(100vw/4);
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -161,10 +161,29 @@ nav hr {
     height: 0vh;
   }
 }
+#micro-progress {
+  position: fixed;
+  z-index: 140;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+#micro-progress .progress-line {
+  width: 100%;
+  height: 1vh;
+  border-radius: 0;
+}
+#micro-progress .progress-line .progress {
+  background: #b11116;
+  border-radius: 0;
+}
+
 #progress {
   position: fixed;
-  bottom: 3vh;
   z-index: 140;
+  bottom: 3vh;
 }
 
 .line-container {
@@ -184,7 +203,6 @@ nav hr {
 }
 .line-container .progress-line .progress {
   position: absolute;
-  width: 75%;
   height: 100%;
   background: black;
   transition: width 1s ease-in-out;
@@ -232,6 +250,26 @@ html {
 body {
   font-size: 1em;
   font-family: "Avenir LT W04_45 Book1475512";
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  background-color: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f2a900;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffbe26;
 }
 
 h1 {
@@ -370,6 +408,11 @@ header {
 header img {
   width: 40vw;
 }
+@media only screen and (min-width: 576px) and (orientation: landscape) {
+  header img {
+    width: 25vw;
+  }
+}
 @media only screen and (min-width: 768px) {
   header img {
     width: 25vw;
@@ -396,9 +439,24 @@ header #menus button {
 #landing {
   margin-top: 8vh;
 }
+@media only screen and (min-width: 576px) and (orientation: landscape) {
+  #landing {
+    margin-top: 20vh;
+  }
+}
 @media only screen and (min-width: 768px) {
   #landing {
     margin-top: 4vh;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  #landing {
+    margin-top: 20vh;
+  }
+}
+@media only screen and (min-width: 992px) and (orientation: landscape) {
+  #landing {
+    margin-top: 0;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -423,7 +481,7 @@ header #menus button {
     height: 24.8120300752vw;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .min-screen {
     width: 20vw;
     height: 15.037593985vw;
@@ -460,6 +518,8 @@ header #menus button {
 }
 
 #landingText {
+  width: 100%;
+  text-align: right;
   padding-right: 10vw;
 }
 @media only screen and (min-width: 768px) {
@@ -467,12 +527,12 @@ header #menus button {
     padding-right: 17vw;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   #landingText {
     padding-right: 0;
+    text-align: left;
     display: flex;
     align-items: center;
-    justify-items: center;
   }
 }
 
@@ -523,26 +583,60 @@ header #menus button {
   color: white;
   scroll-behavior: smooth;
   overflow-y: scroll;
+  /* Handle */
+  /* Handle on hover */
+}
+.chapter-text::-webkit-scrollbar {
+  width: 10px;
+}
+.chapter-text::-webkit-scrollbar-thumb {
+  background: black;
+}
+.chapter-text::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
 }
 @media only screen and (min-width: 1200px) {
   .chapter-text {
     width: 65vw;
-    font-size: 1.5em;
   }
 }
 .chapter-text .close-section {
-  padding: 20px;
+  padding: 0;
+  margin: 0;
+  top: 0 !important;
 }
 .chapter-text .close-chapter {
   border: 2px white solid;
+  margin: 20px;
 }
 .chapter-text .chapter-text-inner {
   padding: 20px;
 }
+@media only screen and (min-width: 768px) {
+  .chapter-text .chapter-text-inner {
+    padding: 20px 100px 100px 100px;
+  }
+}
 @media only screen and (min-width: 992px) {
   .chapter-text .chapter-text-inner {
-    padding: 20px 100px;
+    padding: 20px 300px 100px 100px;
   }
+}
+.chapter-text h1 {
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin-top: 50px;
+}
+
+.chapter-stripes {
+  background: #4d4d4d;
+  padding: 0;
+  height: 15px;
+}
+.chapter-stripes .chapter-stripe {
+  display: inline-block;
+  height: 100%;
+  width: 25%;
 }
 
 .chapter-intro {
@@ -584,9 +678,14 @@ header #menus button {
   }
 }
 
-.move-left {
+.move-more-right {
   transition: all 0.5s ease;
   left: 65vw;
+}
+
+.move-right {
+  transition: all 0.5 ease;
+  left: 0;
 }
 
 .chapter-buttons, .open-chapter-buttons {

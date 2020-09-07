@@ -31,8 +31,8 @@ const openChapter = (current) => {
     section.scrollIntoView();
     // move chapter content, intro and cover to the left and swap buttons out
     setTimeout(() => {
-        chapter.style.left = 0;
-        addClass([intro, cover], 'move-left');
+        addClass([chapter], 'move-right')
+        addClass([intro, cover], 'move-more-right');
         hideShowButtons(intro.querySelector('.chapter-buttons'));
         hideShowButtons(intro.querySelector('.open-chapter-buttons'));
         addClass([mainMenuBtn, progressMenuBtn, langBtn], 'btn-dark');
@@ -50,14 +50,21 @@ const closeChapter = () => {
     let chapter = findChapterContent(whichChapter, chapters);
     let intro = findChapterContent(whichChapter, intros);
     let cover = findChapterContent(whichChapter, covers);
+    let currentNumber = parseInt(whichChapter.substring(whichChapter.length - 1, whichChapter.length));
     whichChapter = false;
 
     hideShowButtons(intro.querySelector('.chapter-buttons'));
     hideShowButtons(intro.querySelector('.open-chapter-buttons'));
-    chapter.style.left = '-100vw';
-    removeClass([intro, cover], 'move-left');
+    removeClass([chapter], 'move-right');
+    removeClass([intro, cover], 'move-more-right');
     removeClass([mainMenuBtn, progressMenuBtn, langBtn], 'btn-dark');
     addScroll();
+
+    // chapter tracker function
+    chapterTracker.openedChapters[currentNumber-1] = true;
+    startProgressData();
+    updateProgress();
+    console.log(JSON.parse(localStorage.getItem('chapterTracker')));
 };
 
 // scroll to specific content when chapter is open

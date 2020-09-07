@@ -24,9 +24,8 @@
 
     <!-- loading screen -->
     <div class="load container-fluid">
-        <div id="stripes">
-            <div class="stripe navy"></div><div class="stripe red" style="left: 20vw"></div><div class="stripe teal" style="left: 40vw"></div><div class="stripe yellow" style="left: 60vw"></div><div class="stripe purple" style="left: 80vw"></div>
-        </div>${}
+        <div id="stripes"><div class="stripe red"></div><div class="stripe teal" style="left: 25vw"></div><div class="stripe yellow" style="left: 50vw"></div><div class="stripe purple" style="left: 75vw"></div>
+        </div>
 
         <div id="loading" class="d-flex justify-content-center align-items-center">
             <img src="assets/loader.gif" width="80px">
@@ -85,27 +84,38 @@
     </nav>
 
     <!-- progress bar at the bottom -->
-    <div id="progress" class="container-fluid d-none d-xl-block">
-        <div class="row">
+    <!-- dot with a class of current is a black circle and dot with a class of completed is filled in black -->
+    <div id="micro-progress" class="container-fluid d-xl-none">
+        <!-- mobile screen progress bar -->
+        <div class="line-container">
+            <div class="progress-line">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+    <div id="progress" class="container-fluid">
+
+        <!-- bigger screen progress bar -->
+        <div class="row d-none d-xl-block">
             <div class="col-10 offset-1 col-xl-6">
                 <div class='line-container'>
 
                     <div class='progress-line'>
-                      <div class='progress' style="width: 40%;">
+                      <div class='progress'>
                       
                       </div>
                        <div class='status'>
-                         <div class='dot completed'>
+                         <div class='dot'>
                             <i class="fas fa-check"></i>
                          </div>
                       </div>
                       <div class='status'>
-                         <div class='dot completed'>
+                         <div class='dot'>
                             <i class="fas fa-check"></i>
                          </div>
                       </div>
                       <div class='status'>
-                         <div class='dot current'>
+                         <div class='dot'>
                             <i class="fas fa-check"></i>
                          </div>
                       </div>
@@ -135,7 +145,7 @@
     <section id="landing" class="container-fluid d-flex align-items-center">
         <div class="row">
             <!-- screens -->
-            <div class="col-12 col-xl-9 text-center">
+            <div class="col-12 col-lg-9 text-center">
                 <div class="min-screen">
                     <div class="min-min-screen">
                         <a href="#chapter-1" class="number"><span>1.</span></a>
@@ -168,7 +178,7 @@
                 </div>
             </div>
 
-            <div id="landingText" class="col-12 col-xl-3 text-right">
+            <div id="landingText" class="col-12 col-lg-3">
                 <div>
                     <h1>Gender<br>Balance<br>Guide</h1>
                     <h1 class="small">for Media</h1>
@@ -188,37 +198,40 @@
             <!-- chatper -->
             <div class="chapter-text" data-content="chapter-1">
                 <div class="sticky-top close-section text-right">
+                    <div class="chapter-stripes">
+                        <div class="chapter-stripe red"></div><div class="chapter-stripe teal" style="left: 25%"></div><div class="chapter-stripe yellow" style="left: 50%"></div><div class="chapter-stripe purple" style="left: 75%"></div>
+                    </div>
                     <button class="btn btn-lg btn-secondary close-chapter"><i class="fas fa-times"></i></button>
                 </div>
                 
 
                 <div class="chapter-text-inner">
-                    <h3 id="section-1">Section one</h3>
+                    <h1 id="section-1">Section one</h1>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex deleniti error non cumque iure voluptatum laboriosam quasi! Nesciunt minus aperiam quidem nulla eaque, eius accusamus error obcaecati hic cum asperiores.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptatem alias fugiat tempora beatae eius quas enim aperiam adipisci accusamus, ratione, dolores non atque amet incidunt voluptate sint temporibus similique!
                     </p>
-                    <h3 id="section-2">Section two</h3>
+                    <h1 id="section-2">Section two</h1>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, architecto quo. Sit eum unde consectetur expedita vitae sequi perspiciatis, quidem ad deserunt velit. Saepe, error natus magni eum expedita consectetur.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quaerat soluta consequuntur laboriosam numquam praesentium, vitae fugit quo doloribus dicta, recusandae inventore ea, voluptate rem expedita nobis placeat sequi labore!
                     </p>
-                    <h3 id="section-3">Section three</h3>
+                    <h1 id="section-3">Section three</h1>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, nihil, aspernatur nisi explicabo facere maiores dolore iusto dolorum aliquid voluptatibus expedita eveniet magni, quasi provident ab dolores et inventore dolor?
                     </p>
-                    <h3 id="section-4">Section four</h3>
+                    <h1 id="section-4">Section four</h1>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quia tempore quidem mollitia similique ut amet vitae accusantium porro? Libero distinctio iusto soluta blanditiis ratione alias, hic in. Mollitia, recusandae!
                     </p>
-                    <h3 id="section-5">Section five: infographic</h3>
+                    <h1 id="section-5">Section five: infographic</h1>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nihil recusandae, dolor omnis eius asperiores placeat id enim distinctio delectus, consequatur provident obcaecati suscipit quibusdam consectetur. Quasi at nostrum officiis?
                     </p>
-                    <h3 id="section-6">Section six: quiz</h3>
+                    <h1 id="section-6">Section six: quiz</h1>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quibusdam, sed non vero cumque velit dolorum voluptatem quasi fugit ex voluptatum quam! Veritatis, suscipit. Molestiae ex voluptatem quas amet asperiores.
@@ -284,33 +297,47 @@
 
             <!-- chatper -->
             <div class="chapter-text" data-content="chapter-2">
-                <button class="btn btn-lg btn-dark close-chapter">close</button>
+                <div class="sticky-top close-section text-right">
+                    <div class="chapter-stripes">
+                        <div class="chapter-stripe red"></div><div class="chapter-stripe teal" style="left: 25%"></div><div class="chapter-stripe yellow" style="left: 50%"></div><div class="chapter-stripe purple" style="left: 75%"></div>
+                    </div>
+                    <button class="btn btn-lg btn-secondary close-chapter"><i class="fas fa-times"></i></button>
+                </div>
+                
 
-                <h3 id="section-1">Section one</h3>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex deleniti error non cumque iure voluptatum laboriosam quasi! Nesciunt minus aperiam quidem nulla eaque, eius accusamus error obcaecati hic cum asperiores.
-                </p>
-                <h3 id="section-2">Section two</h3>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, architecto quo. Sit eum unde consectetur expedita vitae sequi perspiciatis, quidem ad deserunt velit. Saepe, error natus magni eum expedita consectetur.
-                </p>
-                <h3 id="section-3">Section three</h3>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
-                </p>
-                <h3 id="section-4">Section four</h3>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
-                </p>
-                <h3 id="section-5">Section five: infographic</h3>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
-                </p>
-                <h3 id="section-6">Section six: quiz</h3>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
-                </p>
+                <div class="chapter-text-inner">
+                    <h1 id="section-1">Section one</h1>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex deleniti error non cumque iure voluptatum laboriosam quasi! Nesciunt minus aperiam quidem nulla eaque, eius accusamus error obcaecati hic cum asperiores.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptatem alias fugiat tempora beatae eius quas enim aperiam adipisci accusamus, ratione, dolores non atque amet incidunt voluptate sint temporibus similique!
+                    </p>
+                    <h1 id="section-2">Section two</h1>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, architecto quo. Sit eum unde consectetur expedita vitae sequi perspiciatis, quidem ad deserunt velit. Saepe, error natus magni eum expedita consectetur.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quaerat soluta consequuntur laboriosam numquam praesentium, vitae fugit quo doloribus dicta, recusandae inventore ea, voluptate rem expedita nobis placeat sequi labore!
+                    </p>
+                    <h1 id="section-3">Section three</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, nihil, aspernatur nisi explicabo facere maiores dolore iusto dolorum aliquid voluptatibus expedita eveniet magni, quasi provident ab dolores et inventore dolor?
+                    </p>
+                    <h1 id="section-4">Section four</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quia tempore quidem mollitia similique ut amet vitae accusantium porro? Libero distinctio iusto soluta blanditiis ratione alias, hic in. Mollitia, recusandae!
+                    </p>
+                    <h1 id="section-5">Section five: infographic</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nihil recusandae, dolor omnis eius asperiores placeat id enim distinctio delectus, consequatur provident obcaecati suscipit quibusdam consectetur. Quasi at nostrum officiis?
+                    </p>
+                    <h1 id="section-6">Section six: quiz</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quibusdam, sed non vero cumque velit dolorum voluptatem quasi fugit ex voluptatum quam! Veritatis, suscipit. Molestiae ex voluptatem quas amet asperiores.
+                    </p>
 
+                </div>
             </div>
 
             <div class="col-12 col-md-10 offset-md-1 col-xl-4 offset-xl-0 chapter-intro" data-content="chapter-2">
@@ -368,33 +395,47 @@
 
             <!-- chatper -->
             <div class="chapter-text" data-content="chapter-3">
-                <button class="btn btn-lg btn-dark close-chapter">close</button>
+                <div class="sticky-top close-section text-right">
+                    <div class="chapter-stripes">
+                        <div class="chapter-stripe red"></div><div class="chapter-stripe teal" style="left: 25%"></div><div class="chapter-stripe yellow" style="left: 50%"></div><div class="chapter-stripe purple" style="left: 75%"></div>
+                    </div>
+                    <button class="btn btn-lg btn-secondary close-chapter"><i class="fas fa-times"></i></button>
+                </div>
+                
 
-                <h3 id="section-1">Section one</h3>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex deleniti error non cumque iure voluptatum laboriosam quasi! Nesciunt minus aperiam quidem nulla eaque, eius accusamus error obcaecati hic cum asperiores.
-                </p>
-                <h3 id="section-2">Section two</h3>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, architecto quo. Sit eum unde consectetur expedita vitae sequi perspiciatis, quidem ad deserunt velit. Saepe, error natus magni eum expedita consectetur.
-                </p>
-                <h3 id="section-3">Section three</h3>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
-                </p>
-                <h3 id="section-4">Section four</h3>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
-                </p>
-                <h3 id="section-5">Section five: infographic</h3>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
-                </p>
-                <h3 id="section-6">Section six: quiz</h3>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
-                </p>
+                <div class="chapter-text-inner">
+                    <h1 id="section-1">Section one</h1>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex deleniti error non cumque iure voluptatum laboriosam quasi! Nesciunt minus aperiam quidem nulla eaque, eius accusamus error obcaecati hic cum asperiores.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptatem alias fugiat tempora beatae eius quas enim aperiam adipisci accusamus, ratione, dolores non atque amet incidunt voluptate sint temporibus similique!
+                    </p>
+                    <h1 id="section-2">Section two</h1>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, architecto quo. Sit eum unde consectetur expedita vitae sequi perspiciatis, quidem ad deserunt velit. Saepe, error natus magni eum expedita consectetur.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quaerat soluta consequuntur laboriosam numquam praesentium, vitae fugit quo doloribus dicta, recusandae inventore ea, voluptate rem expedita nobis placeat sequi labore!
+                    </p>
+                    <h1 id="section-3">Section three</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, nihil, aspernatur nisi explicabo facere maiores dolore iusto dolorum aliquid voluptatibus expedita eveniet magni, quasi provident ab dolores et inventore dolor?
+                    </p>
+                    <h1 id="section-4">Section four</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quia tempore quidem mollitia similique ut amet vitae accusantium porro? Libero distinctio iusto soluta blanditiis ratione alias, hic in. Mollitia, recusandae!
+                    </p>
+                    <h1 id="section-5">Section five: infographic</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nihil recusandae, dolor omnis eius asperiores placeat id enim distinctio delectus, consequatur provident obcaecati suscipit quibusdam consectetur. Quasi at nostrum officiis?
+                    </p>
+                    <h1 id="section-6">Section six: quiz</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quibusdam, sed non vero cumque velit dolorum voluptatem quasi fugit ex voluptatum quam! Veritatis, suscipit. Molestiae ex voluptatem quas amet asperiores.
+                    </p>
 
+                </div>
             </div>
 
             <div class="col-12 col-md-10 offset-md-1 col-xl-4 offset-xl-0 chapter-intro" data-content="chapter-3">
@@ -526,10 +567,14 @@
     <!-- general -->
     <script src="js/gen.js"></script>
 
+    <!-- progress -->
+    <script src="js/progress.js"></script>
+
     <!-- menus -->
     <script src="js/menus.js"></script>
 
     <!-- chapters -->
     <script src="js/chapter.js"></script>
+
 </body>
 </html>
