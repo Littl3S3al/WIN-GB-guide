@@ -1,4 +1,4 @@
-// main menu styling
+// general elements
 #menulable{
     color: white;
     margin-right: 20px;
@@ -12,7 +12,11 @@ i.ex{
     padding-left: 2px;
     padding-right: 2px;
 }
-nav{
+
+
+
+// menu container styling
+.menu-container{
     width: 100vw;
     height: 100vh;
     z-index: $layer3;
@@ -20,33 +24,40 @@ nav{
     top: 0;
     left: 0;
     transition: left 0.8s ease;
-    .menu{
-        padding:  0 10px;
-        background: $purple;
-        height: 100vh;
-        overflow-y: scroll;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        &::-webkit-scrollbar{
-            display: none;
-        }
-        @include mQ ($md){
-            padding: 0 50px 0 100px;
-        }
-        #purple-bar{
-            background: $purple;
-            height: 12vh;
-        }
+}
+.menu-card{
+    padding:  0 10px;
+    height: 100vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    @include mQ ($md){
+        padding: 0 50px 0 100px;
+    }
+}
+.menu-bar{
+    height: 12vh;
+}
+.screen{
+    background: rgba(255, 255, 255, 0.5);
+    height: 100vh;
+}
+
+
+
+// main menu styling
+nav{
+    .menu{ 
         .accordion{
             @include mQ ($md) {
                 padding-top: 10vh;
             }
         }
     }
-    .screen{
-        background: rgba(255, 255, 255, 0.5);
-        height: 100vh;
-    }
+    
     ul{
         list-style: none;
         padding: 0;
@@ -106,5 +117,89 @@ nav{
     }
     span.expand{
         font-size: 1.5em;      
+    }
+}
+
+// progress menu styling
+#progress-menu-container{
+    .menu-card{
+        .row{
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            @include mQ ($md){
+                padding-left: auto;
+            }
+        }
+        .menu-link{
+            color: white;
+            font-size: 1.5em;
+            margin-right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-progress-icon{
+            color: $light-grey!important;
+            border: 2px solid white!important;
+            margin: 10px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                color: white!important;
+            }
+        }
+        .completed{
+            background-color: $teal!important;
+            color: white!important;
+            border: 4px solid white!important;
+        }
+    }
+    #progress-bar-detailed{
+        width: 100%;
+        bottom: 0;
+        span#progress-percentage{
+            color: white;
+            font-size: 4em;
+            font-weight: bolder;
+        }
+        span#reset{
+            margin-top: 20px;
+            margin-bottom: 100px;
+            transition: color 0.5s ease;
+            &:hover{
+                cursor: pointer;
+                color: white;
+            }
+        }
+        .line-container-detailed { 
+            width: 100%;
+            
+            .progress-line-detailed {
+                  position: relative;
+                  margin: 0 auto;
+                  border-radius: 10px;
+                  width: 100%;
+                  background: white;
+                  height: 10px;
+                  display: flex;
+                  justify-content: space-between;
+          
+                .progress-detailed {
+                    position: absolute;
+                    height: 100%;
+                    background: $teal;
+                    transition: width 1s ease-in-out;
+                }
+            } 
+        }  
     }
 }

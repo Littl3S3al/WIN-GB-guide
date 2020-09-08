@@ -12,10 +12,37 @@ const mainMenuLinks = mainMenu.querySelectorAll('a');
 const mainScreen = document.querySelector('#mainScreen');
 const menuLable = document.querySelector('#menulable');
 
+// THE PROGRESS MENU
+const progressMenu = document.querySelector('#progress-menu-container');
+const progressScreen = document.querySelector('#progress-screen');
+const progressContent = document.querySelector('#progress-icons');
+const progressPercentage = document.querySelector('#progress-percentage');
+const progressPercentageBar = document.querySelector('.progress-detailed');
+const resetProgress = document.querySelector('#reset');
+
+// CHAPTER CONTENT
 const nextButtons = document.querySelectorAll('.btn-next');
 const readitButtons = document.querySelectorAll('.read-it');
 
+// CHAPTER VARIABLES
+const chapters = document.querySelectorAll('.chapter-text');
+const intros = document.querySelectorAll('.chapter-intro');
+const covers = document.querySelectorAll('.chapter-image');
+const closeChapterBtns = document.querySelectorAll('.close-chapter');
+let whichChapter;
 
+// PROGRESS TRACKING
+const progressBar = document.querySelectorAll('.progress');
+const progressDots = document.querySelectorAll('.dot');
+
+let trackedChapters = 0;
+// setting up the progress functions
+let chapterTracker = {
+    openedChapters: [
+        false, false, false, false, false, false
+    ],
+    detailChapters: []
+};
 
 // GENERAL FUNCTIONS
 
@@ -79,6 +106,23 @@ window.addEventListener('resize', () => {
     largeButtons();
 });
 
+
+// prevent zoom
+// $(document).keydown(function(event) {
+//     if (event.ctrlKey==true && (event.which == '61' || event.which == '107' || event.which == '173' || event.which == '109'  || event.which == '187'  || event.which == '189'  ) ) {
+//             event.preventDefault();
+//          }
+//         // 107 Num Key  +
+//         // 109 Num Key  -
+//         // 173 Min Key  hyphen/underscor Hey
+//         // 61 Plus key  +/= key
+// });
+
+// $(window).bind('mousewheel DOMMouseScroll', function (event) {
+//         if (event.ctrlKey == true) {
+//         event.preventDefault();
+//         }
+// });
 
 
 

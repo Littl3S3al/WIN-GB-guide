@@ -1,22 +1,22 @@
-
-
-const progressBar = document.querySelectorAll('.progress');
-const progressDots = document.querySelectorAll('.dot');
-
-let trackedChapters = 0;
-// setting up the progress functions
-let chapterTracker = {
-    openedChapters: [
-        false, false, false, false, false, false
-    ]
-};
-
 const startProgressData = () => {
     localStorage.setItem('chapterTracker', JSON.stringify(chapterTracker));
 };
+
 const retrieveProgressData = () => {
     chapterTracker = JSON.parse(localStorage.getItem('chapterTracker'));
     // console.log(chapterTracker);
+    for(i = 0; i < chapterTracker.detailChapters.length; i ++){
+        let el = progressMenu.querySelector(`#${chapterTracker.detailChapters[i]}`);
+        addClass([el], 'completed');
+    }
+};
+
+const updateLocalStorage = () => {
+    let allCompletedSections = progressMenu.querySelectorAll('.completed');
+    chapterTracker.detailChapters = [];
+    allCompletedSections.forEach(section => {
+        chapterTracker.detailChapters.push(section.id);
+    })
 };
 
 const updateProgress = () => {
@@ -27,9 +27,7 @@ const updateProgress = () => {
         if(chapterTracker.openedChapters[i]){
             trackedChapters ++;
         }
-    }
-
-    
+    } 
     
     // adjusting the styles on the progress bar at the bottom
     let barWidth = trackedChapters*(100/5);
@@ -48,8 +46,17 @@ const updateProgress = () => {
     if(trackedChapters <= 6){
         progressDots[trackedChapters].classList.add('current');
     }
+
+    
 };
-const plusProgress = () => {
-    startProgressData();
-    updateProgress();
-};
+
+const updatePercentage = () => {
+    let done = chapterTracker.detailChapters.length;
+    let total = progressMenu.querySelectorAll('.chapter-shortcut').length;
+    let percentage = Math.floor(done/total*100);
+    progressPercentage.innerText = percentage + '%';
+    progressPercentageBar.style.width = percentage + '%';
+}
+
+
+

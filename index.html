@@ -43,9 +43,9 @@
                 </a>
             </div>
             <!-- all menu buttons -->
-            <div id="menus" class="col-10 d-flex justify-content-end align-items-center">
+            <div id="menus" class="col-xs-10 d-flex justify-content-end align-items-center">
                 <!-- language change button -->
-                <button id="lang" class="btn btn-light">
+                <button id="lang" class="btn btn-primary">
                     عربى
                 </button>
                 <!-- progress menu button -->
@@ -53,8 +53,9 @@
                     <span class="sr-only">Check your progress</span>
                     <i class="fas fa-check"></i>
                 </button>
+                <!-- label for when menu is open -->
+                <span id="menulable" class="d-none"></span>
                 <!-- menu button -->
-                <span id="menulable" class="d-none">Menu</span>
                 <button id="menu" class="btn btn-secondary">
                     <span class="sr-only">Menu</span>
                     <i class="fas fa-bars"></i>
@@ -63,12 +64,43 @@
         </div>
     </header>
 
+    <!-- progress menu -->
+    <div class="container-fluid menu-container offscreen" id="progress-menu-container">
+        <div class="row">
+            <!-- white screen -->
+            <div id="progress-screen" class="d-none d-md-block col-md-4 col-xl-8 screen"></div>
+            
+            <!-- yellow portion of menu -->
+            <div id="progress-content" class="col-12 col-md-8 col-xl-4 menu-card yellow"> 
+                <div class="row sticky-top yellow menu-bar"></div>
+
+                <!-- placeholder for all links -->
+                <div class="row" id="progress-icons">
+
+                </div>
+
+                <!-- progress bar at the bottom -->
+                <div class="row sticky" id="progress-bar-detailed">
+                    <span id="progress-percentage">15%</span>
+                    <div class="line-container-detailed">
+                        <div class="progress-line-detailed">
+                            <div class="progress-detailed"></div>
+                        </div>
+                    </div>
+                    <span id="reset">Want to start over? Reset your progress.</span>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
     <!-- main menu -->
-    <nav class="container-fluid offscreen">
+    <nav class="container-fluid menu-container offscreen">
         <div class="row">
             <div id="mainScreen" class="d-none d-md-block col-md-4 col-xl-8 screen"></div>
-            <div class="col-12 col-md-8 col-xl-4 menu"> 
-                <div id="purple-bar" class="row sticky-top"></div>
+            <div class="col-12 col-md-8 col-xl-4 menu purple menu-card"> 
+                <div class="row sticky-top purple menu-bar"></div>
                 <div class="accordion row" id="main-menu-accordian">
                    
                 </div> <!--accordian end-->
@@ -85,6 +117,7 @@
 
     <!-- progress bar at the bottom -->
     <!-- dot with a class of current is a black circle and dot with a class of completed is filled in black -->
+    <!-- progress bar on small screen -->
     <div id="micro-progress" class="container-fluid d-xl-none">
         <!-- mobile screen progress bar -->
         <div class="line-container">
@@ -93,10 +126,11 @@
             </div>
         </div>
     </div>
-    <div id="progress" class="container-fluid">
+    <!-- progress bar big screen -->
+    <div id="progress" class="container-fluid d-none d-xl-block">
 
         <!-- bigger screen progress bar -->
-        <div class="row d-none d-xl-block">
+        <div class="row">
             <div class="col-10 offset-1 col-xl-6">
                 <div class='line-container'>
 
@@ -226,12 +260,12 @@
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quia tempore quidem mollitia similique ut amet vitae accusantium porro? Libero distinctio iusto soluta blanditiis ratione alias, hic in. Mollitia, recusandae!
                     </p>
-                    <h1 id="section-5">Section five: infographic</h1>
+                    <h1 id="section-5" class="infographic">Section five: infographic</h1>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nihil recusandae, dolor omnis eius asperiores placeat id enim distinctio delectus, consequatur provident obcaecati suscipit quibusdam consectetur. Quasi at nostrum officiis?
                     </p>
-                    <h1 id="section-6">Section six: quiz</h1>
+                    <h1 id="section-6" class="quiz">Section six: quiz</h1>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quibusdam, sed non vero cumque velit dolorum voluptatem quasi fugit ex voluptatum quam! Veritatis, suscipit. Molestiae ex voluptatem quas amet asperiores.
@@ -240,7 +274,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-10 offset-md-1 col-xl-4 offset-xl-0 chapter-intro" data-content="chapter-1">
+            <div class="col-12 col-md-10 offset-md-1 col-xl-5 offset-xl-0 chapter-intro" data-content="chapter-1">
                 <!-- chapter row -->
                 <div class="row m-xl-5">
                     <!-- number -->
@@ -255,6 +289,7 @@
                         <p>
                             The reasons why media organisations and media professionals should be working to increase gender balance in their content.
                         </p>
+                        <br>
                         <!-- chapter buttons -->
                         <div class="chapter-buttons">
                             <button class="mb-3 btn btn-danger read-it" data-target="chapter-1">
@@ -266,10 +301,10 @@
                         </div>
                         <!-- buttons which only appear when chapter opens -->
                         <div class="open-chapter-buttons hidden-buttons">
-                            <button class="chapter-link btn btn-secondary" data-link="section-1">concept 1</button>
-                            <button class="chapter-link btn btn-secondary" data-link="section-2">concept 2</button>
-                            <button class="chapter-link btn btn-secondary" data-link="section-3">concept 3</button>
-                            <button class="chapter-link btn btn-secondary" data-link="section-4">concept 4</button>
+                            <button class="chapter-link btn btn-secondary" data-link="section-1">Responsibility to promote equality and diversity</button>
+                            <button class="chapter-link btn btn-secondary" data-link="section-2">Women are an untapped audience – it makes business sense</button>
+                            <button class="chapter-link btn btn-secondary" data-link="section-3">Diversity of views makes for better content and products</button>
+                            <button class="chapter-link btn btn-secondary" data-link="section-4">Sexism is bad for business</button>
                             <button class="chapter-link btn btn-primary" data-link="section-5">infographic</button>
                             <button class="chapter-link btn btn-warning" data-link="section-6">quiz</button>
 
@@ -285,7 +320,7 @@
                 </div><!--row end-->
             </div>
 
-            <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-0 chapter-image" data-content="chapter-1">
+            <div class="col-12 col-md-10 offset-md-1 col-xl-7 offset-xl-0 chapter-image" data-content="chapter-1">
                 <div class="placeholder"></div>
             </div>
         </div>
@@ -326,12 +361,12 @@
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quia tempore quidem mollitia similique ut amet vitae accusantium porro? Libero distinctio iusto soluta blanditiis ratione alias, hic in. Mollitia, recusandae!
                     </p>
-                    <h1 id="section-5">Section five: infographic</h1>
+                    <h1 id="section-5" class="infographic">Section five: infographic</h1>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nihil recusandae, dolor omnis eius asperiores placeat id enim distinctio delectus, consequatur provident obcaecati suscipit quibusdam consectetur. Quasi at nostrum officiis?
                     </p>
-                    <h1 id="section-6">Section six: quiz</h1>
+                    <h1 id="section-6" class="quiz">Section six: quiz</h1>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quibusdam, sed non vero cumque velit dolorum voluptatem quasi fugit ex voluptatum quam! Veritatis, suscipit. Molestiae ex voluptatem quas amet asperiores.
@@ -340,7 +375,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-10 offset-md-1 col-xl-4 offset-xl-0 chapter-intro" data-content="chapter-2">
+            <div class="col-12 col-md-10 offset-md-1 col-xl-5 offset-xl-0 chapter-intro" data-content="chapter-2">
                 <!-- chapter row -->
                 <div class="row m-xl-5">
                     <!-- number -->
@@ -383,7 +418,7 @@
                 </div><!--row end-->
             </div>
 
-            <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-0 chapter-image" data-content="chapter-2">
+            <div class="col-12 col-md-10 offset-md-1 col-xl-7 offset-xl-0 chapter-image" data-content="chapter-2">
                 <div class="placeholder"></div>
             </div>
         </div>
@@ -424,12 +459,12 @@
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quia tempore quidem mollitia similique ut amet vitae accusantium porro? Libero distinctio iusto soluta blanditiis ratione alias, hic in. Mollitia, recusandae!
                     </p>
-                    <h1 id="section-5">Section five: infographic</h1>
+                    <h1 id="section-5" class="infographic">Section five: infographic</h1>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nihil recusandae, dolor omnis eius asperiores placeat id enim distinctio delectus, consequatur provident obcaecati suscipit quibusdam consectetur. Quasi at nostrum officiis?
                     </p>
-                    <h1 id="section-6">Section six: quiz</h1>
+                    <h1 id="section-6" class="quiz">Section six: quiz</h1>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quasi rerum, et quis delectus ratione dolor velit ducimus eligendi provident distinctio alias ullam eum laudantium iusto quae quam eaque?
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quibusdam, sed non vero cumque velit dolorum voluptatem quasi fugit ex voluptatum quam! Veritatis, suscipit. Molestiae ex voluptatem quas amet asperiores.
@@ -438,7 +473,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-10 offset-md-1 col-xl-4 offset-xl-0 chapter-intro" data-content="chapter-3">
+            <div class="col-12 col-md-10 offset-md-1 col-xl-5 offset-xl-0 chapter-intro" data-content="chapter-3">
                 <!-- chapter row -->
                 <div class="row m-xl-5">
                     <!-- number -->
@@ -481,7 +516,7 @@
                 </div><!--row end-->
             </div>
 
-            <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-0 chapter-image" data-content="chapter-3">
+            <div class="col-12 col-md-10 offset-md-1 col-xl-7 offset-xl-0 chapter-image" data-content="chapter-3">
                 <div class="placeholder"></div>
             </div>
         </div>
@@ -566,6 +601,9 @@
 
     <!-- general -->
     <script src="js/gen.js"></script>
+
+    <!-- population of menus etc... -->
+    <script src="js/population.js"></script>
 
     <!-- progress -->
     <script src="js/progress.js"></script>

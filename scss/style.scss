@@ -26,6 +26,9 @@ body{
     font-size: 1em;
     font-family:"Avenir LT W04_45 Book1475512";
 }
+body.modal-open{
+    padding-right: 15px;
+}
 
 // customising scrollbar
 ::-webkit-scrollbar {
@@ -48,14 +51,20 @@ body{
 // font styles
 h1{
     font-family:"Avenir LT W04_65 Medium1475536";
-    @include mQ ($lg) {
-        font-size: 4em;
+    font-weight: bolder;
+    @include mQ ($xl) {
+        font-size: 5em;
     }
 }
 h1.small{
     font-size: 1em;
+    @include mQ ($xl){
+        font-size: 2.5em;
+    }
+}
+p{
     @include mQ ($lg){
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
 
@@ -89,7 +98,6 @@ h1.small{
     opacity: 1;
     transition: opacity 0.5s ease;
 }
-// this is for the menu to slide in from the right
 .offscreen {
     left: 100vw;
     transition: left 0.8s ease;
@@ -99,11 +107,17 @@ h1.small{
 }
 .spacer{
     height: 10vh;
+    @include mQ ($lg, landscape) {
+        height: 15vh;
+    }
 }
 
 // buttons
 .btn{
     border-radius: 50px;
+    @include mQ ($lg){
+        font-size: 1.2em;
+    }
 }
 .btn-light{
     background: $light-grey;
@@ -177,7 +191,12 @@ header{
     }
     #menus{
         button{
-            margin-left: 10px;
+            margin-right: 10px;
+        }
+        #menu{
+            @include mQ ($md) {
+                margin-right: 20px;
+            }
         }
     }
 }
@@ -242,6 +261,9 @@ $deviceHeightMax: $deviceWidthMax/1.33;
         padding: 10px 20px;  
         border: 5px solid $med-grey;
     }
+    @include mQ ($xl) {
+        margin: 4px;
+    }
 }
 .min-min-screen{
     width: 100%;
@@ -277,9 +299,9 @@ $deviceHeightMax: $deviceWidthMax/1.33;
     }
     @include mQ ($lg){
         padding-right: 0;
-        text-align: left;
+        text-align: right;
         display: flex;
-        align-items: center;
+        align-items: top;
     }
 }
 #beginBtn{
@@ -307,11 +329,21 @@ $deviceHeightMax: $deviceWidthMax/1.33;
         width: 120px;
         height: 120px;
         font-size: 6em;
+        transition: all 0.5s ease;
         @include mQ ($xl){
             width: 150px;
             height: 150px;
             font-size: 8em;
         }
+    }
+}
+
+.number-smaller{
+    span{
+        transition: all 0.5s ease;
+        width: 100px;
+        height: 100px;
+        font-size: 4em;
     }
 }
 
@@ -342,7 +374,7 @@ $deviceHeightMax: $deviceWidthMax/1.33;
     }
     
     @include mQ ($xl) {
-        width: 65vw;
+        width: 57vw;
     }
     // inside the chapter styles
     .close-section{
@@ -388,7 +420,7 @@ $deviceHeightMax: $deviceWidthMax/1.33;
     transition: all 0.5s ease;
     left: 0;
     margin-bottom: 50px;
-    @include mQ ($md) {
+    @include mQ ($md, landscape) {
         padding-right: 10%;
     }
     @include mQ ($lg) {
@@ -416,7 +448,7 @@ $deviceHeightMax: $deviceWidthMax/1.33;
 // this is for the chapter info and image to slide to the right - offscreen
 .move-more-right{
     transition: all 0.5s ease;
-    left: 65vw;
+    left: 55vw;
 }
 .move-right{
     transition: all 0.5 ease;
@@ -431,8 +463,8 @@ $deviceHeightMax: $deviceWidthMax/1.33;
         margin-top: 10px;
     }
     .navigationBtns{
-        position: absolute;
-        top: 50vh;
+        position: fixed;
+        bottom: 20px;
     }
 }
 .hidden-buttons{

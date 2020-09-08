@@ -24,13 +24,14 @@ window.addEventListener('load', () => {
         loadScrn.classList.add('d-none');
     }, 1500);
 
+
+    // get current progress of the user
     if(localStorage.getItem('chapterTracker')){
         retrieveProgressData();
         updateProgress();
-        console.log('you have been here before')
+        // console.log('you have been here before')
     } else {
         startProgressData();
-        updateProgress();
-        console.log('this is your first visit')
+        // console.log('this is your first visit')
     }
 })
