@@ -51,9 +51,16 @@ i.ex {
 }
 
 nav .menu .accordion {
+  font-size: 0.8em;
   padding-top: 3vh;
 }
+@media only screen and (min-width: 992px) {
+  nav .menu .accordion {
+    font-size: 1em;
+  }
+}
 nav form {
+  padding-left: 20px;
   color: white;
 }
 nav form i {
@@ -100,6 +107,7 @@ nav ul li {
   padding: 5px 0 5px 50px;
   color: white;
   transition: all 0.5s ease;
+  font-size: 1.1em;
 }
 nav ul li:hover {
   color: #f2a900;
@@ -122,6 +130,7 @@ nav hr {
   display: flex;
   align-items: top;
   justify-content: space-between;
+  font-size: 1em;
 }
 @media only screen and (min-width: 768px) {
   .chapter-heading {

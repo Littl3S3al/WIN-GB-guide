@@ -142,6 +142,7 @@ animateIntro();
 // event listener to check window resize
 window.addEventListener('resize', () => {
     largeButtons();
+    // location.reload();
 });
 
 

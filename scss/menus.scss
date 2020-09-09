@@ -50,13 +50,19 @@ i.ex{
 
 // main menu styling
 nav{
+    
     .menu{ 
         .accordion{
+            font-size: 0.8em;
             padding-top: 3vh;
+            @include mQ ($lg){
+                font-size: 1em;
+            }
         }
     }
 
     form{
+        padding-left: 20px;
         i{
             font-size: 1.2em;
         }
@@ -104,6 +110,7 @@ nav{
             padding: 5px 0 5px 50px;
             color: white;
             transition: all 0.5s ease;
+            font-size: 1.1em;
             &:hover{
                 color: $yellow;
                 text-decoration: none;
@@ -128,6 +135,7 @@ nav{
     display: flex;
     align-items: top;
     justify-content: space-between;
+    font-size: 1em;
     @include mQ ($md) {
         margin: 5px 10px 5px 0;
         align-items: center;

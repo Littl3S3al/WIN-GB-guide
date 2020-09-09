@@ -48,9 +48,9 @@ const openChapter = () => {
  
      // event lister for scrolling and if elements come into view then make their progress completed
      chapter.addEventListener('wheel', () => {
-         let allSections = chapter.querySelectorAll('h1');
+         let allSections = chapter.querySelectorAll('div');
          allSections.forEach(section => {
-             if(section.getBoundingClientRect().bottom <= window.innerHeight*0.8 && section.getBoundingClientRect().top >= 0){
+             if(section.getBoundingClientRect().bottom <= window.innerHeight && section.getBoundingClientRect().top >= 0){
                  let sectionNo = section.id;
                  let id = progressMenu.querySelector(`#${current}-${sectionNo}`);
                  if(id){
@@ -61,7 +61,7 @@ const openChapter = () => {
      });
 
      chapter.addEventListener('touchmove', () => {
-        let allSections = chapter.querySelectorAll('h1');
+        let allSections = chapter.querySelectorAll('div');
         allSections.forEach(section => {
             if(section.getBoundingClientRect().bottom <= window.innerHeight*0.8 && section.getBoundingClientRect().top >= 0){
                 let sectionNo = section.id;
@@ -117,7 +117,7 @@ const goToContent = (shortcut) => {
     let chapter = findChapterContent(whichChapter, chapters);
     let bookmark = chapter.querySelector(`#${shortcut}`);
     let topPos = bookmark.offsetTop;
-    chapter.scrollTop = topPos;
+    chapter.scrollTop = topPos - 200;
 };
 
 // toggle chapter hidden class

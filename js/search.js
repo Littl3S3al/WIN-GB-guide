@@ -34,7 +34,7 @@ searchFormInput.addEventListener('keyup', () => {
                     let divContent = div.textContent.toUpperCase();
                     if(divContent.includes(searchTerm)){
                         let n = divContent.indexOf(searchTerm);
-                        let result = div.textContent.substring(n-10, n +100);
+                        let result = div.textContent.substring(n-10, n + 200);
                         link += `
                         <p>
                             <span class="chapter-shortcut" data-target="${chapter.dataset.content}" data-shortcut="${div.id}">${result}...</span>
