@@ -198,6 +198,27 @@ document.body.addEventListener('click', (e) => {
     if(e.target.id === "dont-reset"){
         resetProgress.innerHTML = 'Want to start over? Reset your progress.'
     }
+
+    // additional menu
+    if(e.target.classList.contains('additional-link')){
+        openAdditionalContent(e.target.dataset.target);
+    };
+    if(e.target.classList.contains('close-addition') || e.target.id === "additional-screen"){
+        closeAdditionalContent();
+    }
+    if(e.target.tagName === 'I' && e.target.parentElement && e.target.parentElement.classList.contains('close-addition')){
+        closeAdditionalContent();
+    }
+
+    // click on glossary term
+    if(e.target.classList.contains('gloss-link')){
+        openAdditionalContent('glossary');
+        let searchTerm = e.target.dataset.target;
+        let searchResult = glossary.querySelector(`#glossary-${searchTerm}`);
+        let topPos = searchResult.offsetTop;
+        additionalScrollable.scrollTop = topPos;
+        addClass([searchResult], 'highlighted');
+    }
     
 })
 

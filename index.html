@@ -40,7 +40,7 @@
     <header class="container-fluid animate__animated animate__fadeInDown animate__delay-1s">
         <div class="row d-flex justify-content-between">
             <!-- main logo -->
-            <div id="logo" class="col-1">
+            <div id="logo" class="col-2">
                 <a href="#landing">
                     <img src="assets/WIN_logo.png" alt="Women In News">
                 </a>
@@ -71,10 +71,10 @@
     <div class="container-fluid menu-container offscreen" id="progress-menu-container">
         <div class="row">
             <!-- white screen -->
-            <div id="progress-screen" class="d-none d-md-block col-md-4 col-xl-8 screen"></div>
+            <div id="progress-screen" class="d-none d-md-block col-md-4 col-xl-7 screen"></div>
             
             <!-- yellow portion of menu -->
-            <div id="progress-content" class="col-12 col-md-8 col-xl-4 menu-card yellow"> 
+            <div id="progress-content" class="col-12 col-md-8 col-xl-5 menu-card yellow"> 
                 <div class="row sticky-top yellow menu-bar"></div>
 
                 <!-- placeholder for all links -->
@@ -101,18 +101,28 @@
     <!-- main menu -->
     <nav class="container-fluid menu-container offscreen">
         <div class="row">
-            <div id="mainScreen" class="d-none d-md-block col-md-4 col-xl-8 screen"></div>
-            <div class="col-12 col-md-8 col-xl-4 menu purple menu-card"> 
+            <div id="mainScreen" class="d-none d-md-block col-md-4 col-xl-7 screen"></div>
+            <div class="col-12 col-md-8 col-xl-5 menu purple menu-card"> 
                 <div class="row sticky-top purple menu-bar"></div>
+                <div class="row">
+                    <div class="col-6">
+                        <img src="assets/WN_logo_white.png" alt="Women In News" class="w-100">
+                    </div>
+                    <div class="col-6">
+                        <img src="assets//WAN-IFRA-Logo.png" alt="WAN IFRA" class="w-100">
+                    </div>
+                </div>
                 <div class="accordion row" id="main-menu-accordian">
                    
                 </div> <!--accordian end-->
                 <hr>
                 <ul>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Quizes</a></li>
-                    <li><a href="#">Case Studies</a></li>
-                    <li><a href="#">Glossary</a></li>
+                    <li class="additional-link" data-target="about">About us</li>
+                    <li class="additional-link" data-target="contacts">Contacts</li>
+                    <li class="additional-link" data-target="what-to-expect">What to expect from this guide</li>
+                    <li class="additional-link" data-target="guide">Gender definition and a non-binary guide</li>
+                    <li class="additional-link" data-target="glossary">Glossary</li>
+                    
                 </ul>
             </div>
         </div>
@@ -217,8 +227,9 @@
 
             <div id="landingText" class="col-12 col-lg-3 animate__animated animate__fadeInRight animate__delay-1s">
                 <div>
-                    <h1>Gender<br>Balance<br>Guide</h1>
-                    <h1 class="small">for Media</h1>
+                    <h2>&mdash; Amplifying women’s voices &mdash;</h2>
+                    <h1>Gender Balance Guide</h1>
+                    <h1 class="small">&mdash; for Media &mdash;</h1>
                     <br>
                     <a href="#chapter-1" class="btn-next btn btn-primary">Begin <i class="fas fa-arrow-down"></i></a>
                 </div>
@@ -245,6 +256,7 @@
                 <div class="chapter-text-inner">
                     <h1 id="section-1">Section one</h1>
                     <p>
+                        <span class="gloss-link" data-target="gender-bias">gender bias</span>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex deleniti error non cumque iure voluptatum laboriosam quasi! Nesciunt minus aperiam quidem nulla eaque, eius accusamus error obcaecati hic cum asperiores.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptatem alias fugiat tempora beatae eius quas enim aperiam adipisci accusamus, ratione, dolores non atque amet incidunt voluptate sint temporibus similique!
                     </p>
@@ -534,6 +546,214 @@
         </div>
     </section>
 
+    <!-- additional content from the right -->
+    <section class="additional-section section-right container-fluid">
+        <div class="row">
+            <div id="additional-screen" class="screen d-none d-xl-block col-xl-7 "></div>
+
+            <div class="col-12 col-xl-5 additional-content">
+                <!-- colour bars -->
+                <div class="sticky-top close-section text-right">
+                    <div class="chapter-stripes">
+                        <div class="chapter-stripe red"></div><div class="chapter-stripe teal" style="left: 25%"></div><div class="chapter-stripe yellow" style="left: 50%"></div><div class="chapter-stripe purple" style="left: 75%"></div>
+                    </div>
+                    <button class="btn btn-lg btn-dark close-addition"><i class="fas fa-times"></i></button>
+                </div>
+
+                <!-- section one: about us -->
+                <div id="about" class="text-content d-none">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="about-logo">
+                                <img src="assets/WIN_AllLogos_English.png" alt="Women in News" class="w-50 mx-auto">
+                            </div>
+                            <p>
+                                Women in News (WIN), an initiative by WAN-IFRA, aims to increase women’s leadership and voice sin the news. It does so by equipping women journalists and editors with the skills, strategies and support networks they need to take on greater leadership positions and editorial influence within the industry.
+                            </p>
+                            <p>
+                                In parallel, WIN partners with media organisations to identify industry-led solutions to close the gap between men and women in their newsrooms, boardrooms and in the content they produce.
+                            </p>
+                            <p>
+                                WIN is currently working with more than 90 media from 15 countries throughout sub-Saharan Africa, the Arab Region and South East Asia (SEA):
+                            </p>
+                            <p>
+                                WIN AFRICA: Botswana, Kenya, Malawi, Rwanda, Somalia, Tanzania, Uganda, Zambia, and Zimbabwe
+                            </p>
+                            <p>
+                                WIN ARAB REGION: Egypt, Jordan, Lebanon and Palestine
+                            </p>
+                            <p>
+                                WIN SEA: Cambodia, Myanmar and Vietnam
+                            </p>
+                            <p>
+                                To view more about WIN, vist our website here: <a href="http://womeninnews.org/" target="_blank">www.womeninnews.org</a>
+                            </p>
+                            
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="about-logo">
+                                <img src="assets/WAN-IFRA-Logo.png" alt="WAN IFRA" class="w-50 mx-auto">
+                            </div>
+                            <p>
+                                WIN is made possible through support from the Swedish International Development Cooperation Agency (Sida) and the Royal Norwegian Ministry of Foreign Affairs.
+                            </p>
+                            <p>
+                                WAN-IFRA is the global organisation of the world’s newspapers and news publishers, representing more than 18,000 publications, 15,000 online sites and over 3,000 companies in more than 120 countries. WAN-IFRA is unique in its position as a global industry association with a human rights mandate to defend and promote media freedom, and the economic independence of news media as an essential condition of that freedom.
+                            </p>
+                            <p>
+                                WAN-IFRA applies a dual approach to supporting media freedom. It addresses political and structural constraints to media freedom through advocacy and at the same time works to strengthen the capacity and networks of the media and their representative institutions.
+                            </p>
+                            <p>
+                                This dual approach allows WAN-IFRA to address challenges to media freedom from multiple perspectives, leveraging experiences and synergies between advocacy and development projects, partnerships and the wider expertise of WAN-IFRA’s international community to encourage meaningful change.
+                            </p>
+                            <p>
+                                To view more about WAN IFRA, vist our website here: <a href="https://www.wan-ifra.org/" target="_blank">www.wan-ifra.org</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- section two: contacts -->
+                <div id="contacts" class="text-content d-none">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Contacts</h2>
+                            <hr>
+                        </div>
+
+                        <div class="col-12 col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="bold">Melanie Walker</p>
+                                    <p>WIN Executive Director</p>
+                                    <p><a href="mailto:melanie.walker@wan-ifra.org">melanie.walker@wan-ifra.org</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="bold">Tikhala Chibwana</p>
+                                    <p>WIN Africa Director</p>
+                                    <p><a href="mailto:tikhala.chibwana@womeninnews.org">tikhala.chibwana@womeninnews.org</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="bold">Fatemah Farag</p>
+                                    <p>WIN MENA Director </p>
+                                    <p><a href="mailto:fatemah.farag@womeninnews.org">fatemah.farag@womeninnews.org</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="bold">Rebecca Zausmer </p>
+                                    <p>WIN Insights Director</p>
+                                    <p><a href="mailto:rebecca.zausmer@womeninnews.org ">rebecca.zausmer@womeninnews.org </a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- section three: what to expect -->
+                <div id="what-to-expect" class="text-content d-none">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>This guide</h2>
+                            <hr>
+                        </div>
+                        <div class="col-12">
+                            <p>
+                                This guide aims to equip media organisations and professionals with the necessary tools and insights to increase gender balance in their content.
+                            </p>
+                            <p>It should help you to:</p>
+                            <ul>
+                                <li>Understand the importance of gender balance in content</li>
+                                <li>Identify the different ways in which the media gender stereotypes</li>
+                                <li>Understand how to avoid gender stereotyping</li>
+                                <li>Develop organisational strategies to improve gender balance in content</li>
+                                <li>Identify suitable metrics and tools to track their progress</li>
+                                <li>Learn from successful initiatives that have been implemented by other news organisations</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- section four: Gender definition and a non-binary guide -->
+                <div id="guide" class="text-content d-none">
+                    <div class="row">
+                        <div class="col-12 col-lg-8">
+                            <h2>Gender definition and a non-binary guide</h2>
+                            <hr>
+                            <p>
+                                This guide reflects Women in News’ primary mission, promoting the leadership and voices of women in the media.
+                            </p>
+                            <p>
+                                For the purposes of this guide, the term ‘gender balance’ is used to refer to the balance between women and men.
+                            </p>
+                            <p>
+                                Women in News, however, understands that gender is not binary, but is a spectrum. While this guide focuses on the balance between women and men only, elements of the guide can be applied to the media’s representation and portrayal of trans people and the LGBTQIA+ community more broadly.
+                            </p>
+                            <p>
+                                WIN recognises the need for a more specific non-binary resource for the media industry and will be creating one in the near future.
+                            </p>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <img src="assets/images/non-binary-guide-img.png" alt="Non-binary character" class="w-100">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- section five: glossary -->
+                <div id="glossary" class="text-content d-none">
+                    <div class="col-12">
+                        <h2>Glossary</h2>
+                        <hr>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <form id="glossary-search-form">
+                            <div class="form-group  d-flex justify-content-center md-form form-sm mt-0">
+                                <label for="search-glossary" class="sr-only">Search the Glossary</label>
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                                <input type="text" class="form-control form-control-sm ml-3 w-75" id="search-glossary" aria-describedby="search form" placeholder="Search...">
+                              </div>
+                        </form>
+                    </div>
+                    <div class="col-12 card">
+                        <div class="card-body" id="glossary-gender">
+                            <h3>GENDER</h3>
+                            <p>The socially constructed charac-teristics that a person is given by society, such as norms, behaviours and relationships. Most societies define gender as binary, where a person is either a man or woman. However, our gender is irrespective of whether a person is born male or female.</p>
+                            <p><i>* As our understanding of gender as a spectrum rather than binary increases, this definition will continue to evolve.</i></p>
+                        </div>
+                    </div>
+                    <div class="col-12 card" id="glossary-gender-stereotype">
+                        <div class="card-body">
+                            <h3>GENDER STEREOTYPE</h3>
+                            <p>Preconceived ideas of what women and men’s attributes, characteristics and roles should be based on their gender.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 card" id="glossary-gender-bias">
+                        <div class="card-body">
+                            <h3>GENDER BIAS</h3>
+                            <p>Actions or thoughts that are preju-diced (consciously or unconsciously) because of preconceived ideas of what women and men’s attributes, characteristics and roles should be based on their gender.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -625,6 +845,9 @@
 
     <!-- chapters -->
     <script src="js/chapter.js"></script>
+
+    <!-- search forms -->
+    <script src="js/search.js"></script>
 
 </body>
 </html>

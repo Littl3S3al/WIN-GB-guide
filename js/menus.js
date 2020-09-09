@@ -131,3 +131,24 @@ progressMenu.addEventListener('click', e => {
     }
 })
 
+// function for additional menu
+const openAdditionalContent = target => {
+    removeScroll();
+    setTimeout(() => {
+        addClass([additionalMenu], 'move-left');
+    }, 600);
+    removeClass([additionalMenu.querySelector(`#${target}`)], 'd-none');
+    
+}
+
+const closeAdditionalContent = () => {
+    let cards = glossaryText.querySelectorAll('.card');
+    cards.forEach(card => {
+        card.style.display = '';
+    })
+    removeClass(cards, 'highlighted');
+    glossaryForm.reset();
+    removeClass([additionalMenu], 'move-left');
+    addScroll();
+    addClass(additionalMenu.querySelectorAll('.text-content'), 'd-none');
+}

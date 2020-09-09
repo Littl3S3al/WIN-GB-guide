@@ -24,10 +24,9 @@ chapterContent.forEach(chapter => {
     `;
     // add the chapter number as a row and a tag in the progress menu
     progressContent.innerHTML += `
-        <div class="row" id="progress-section-${chapter.number}">
+        <div class="row w-100" id="progress-section-${chapter.number}">
             <a href="#chapter-${chapter.number}" class="menu-link" data-target="chapter-${chapter.number}">${chapter.number}.</a>
         </div>
-        <br>
     `;
 })
 chapterContent.forEach(chapter => {

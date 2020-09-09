@@ -50,10 +50,8 @@ i.ex {
   height: 100vh;
 }
 
-@media only screen and (min-width: 768px) {
-  nav .menu .accordion {
-    padding-top: 10vh;
-  }
+nav .menu .accordion {
+  padding-top: 3vh;
 }
 nav ul {
   list-style: none;
@@ -376,10 +374,21 @@ h1 {
 
 h1.small {
   font-size: 1em;
+  color: #4d4d4d;
 }
 @media only screen and (min-width: 1200px) {
   h1.small {
     font-size: 2.5em;
+  }
+}
+
+h2 {
+  font-size: 1em;
+  color: #4d4d4d;
+}
+@media only screen and (min-width: 1200px) {
+  h2 {
+    font-size: 1.5em;
   }
 }
 
@@ -639,20 +648,17 @@ header #menus button {
 
 #landingText {
   width: 100%;
-  text-align: right;
-  padding-right: 10vw;
+  text-align: center;
 }
 @media only screen and (min-width: 768px) {
   #landingText {
-    padding-right: 17vw;
+    padding-top: 30px;
   }
 }
 @media only screen and (min-width: 992px) {
   #landingText {
-    padding-right: 0;
-    text-align: right;
-    display: flex;
-    align-items: top;
+    padding: 0;
+    text-align: left;
   }
 }
 
@@ -703,7 +709,7 @@ header #menus button {
   background: #4d4d4d;
   height: 100vh !important;
   width: 100vw;
-  z-index: 2000;
+  z-index: 1000;
   position: fixed;
   top: 0;
   left: -100vw;
@@ -726,6 +732,7 @@ header #menus button {
 @media only screen and (min-width: 1200px) {
   .chapter-text {
     width: 57vw;
+    z-index: 2000;
   }
 }
 .chapter-text .close-section {
@@ -812,8 +819,13 @@ header #menus button {
 }
 
 .move-right {
-  transition: all 0.5 ease;
+  transition: all 0.5s ease;
   left: 0;
+}
+
+.move-left {
+  transition: all 0.5s ease;
+  right: 0 !important;
 }
 
 .chapter-buttons, .open-chapter-buttons {
@@ -834,6 +846,68 @@ header #menus button {
   height: 0;
   opacity: 0;
   overflow-y: hidden;
+}
+
+.additional-section {
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  z-index: 2000;
+  transition: all 0.7s ease;
+}
+@media only screen and (min-width: 1200px) {
+  .additional-section {
+    z-index: 1000;
+  }
+}
+.additional-section .additional-content {
+  background: white;
+  padding: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.additional-section .close-addition {
+  margin: 20px;
+}
+.additional-section .text-content {
+  padding: 0 10px 100px 10px;
+}
+@media only screen and (min-width: 992px) {
+  .additional-section .text-content {
+    padding: 0 50px 100px 50px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .about-logo {
+    height: 15vh;
+  }
+}
+
+#contacts .card {
+  margin: 10px;
+}
+
+span.gloss-link {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #f2a900;
+}
+span.gloss-link:hover {
+  cursor: pointer;
+}
+
+#glossary input, #glossary input:focus {
+  border-width: 0 0 1px 0;
+  box-shadow: 0 1px 0 0 #500878;
+  border-radius: 0;
+}
+#glossary .card {
+  margin-bottom: 10px;
+}
+#glossary .card.highlighted {
+  background: #f2a900;
 }
 
 /*# sourceMappingURL=style.css.map */

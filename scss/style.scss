@@ -62,8 +62,16 @@ h1{
 }
 h1.small{
     font-size: 1em;
+    color: $dark-grey;
     @include mQ ($xl){
         font-size: 2.5em;
+    }
+}
+h2{
+    font-size: 1em;
+    color: $dark-grey;
+    @include mQ ($xl) {
+        font-size: 1.5em;
     }
 }
 p{
@@ -297,16 +305,13 @@ $deviceHeightMax: $deviceWidthMax/1.33;
 
 #landingText{
     width: 100%;
-    text-align: right;
-    padding-right: $deviceSpace;
+    text-align: center;
     @include mQ ($md) {
-        padding-right: $deviceSpaceMed;
+        padding-top: 30px;
     }
     @include mQ ($lg){
-        padding-right: 0;
-        text-align: right;
-        display: flex;
-        align-items: top;
+        padding: 0;
+        text-align: left;
     }
 }
 #beginBtn{
@@ -357,7 +362,7 @@ $deviceHeightMax: $deviceWidthMax/1.33;
     background: $dark-grey;
     height: 100vh!important;
     width: 100vw;
-    z-index: $front;
+    z-index: $layer1;
     position: fixed;
     top: 0;
     left: -100vw;
@@ -380,6 +385,7 @@ $deviceHeightMax: $deviceWidthMax/1.33;
     
     @include mQ ($xl) {
         width: 57vw;
+        z-index: $front;
     }
     // inside the chapter styles
     .close-section{
@@ -456,8 +462,12 @@ $deviceHeightMax: $deviceWidthMax/1.33;
     left: 55vw;
 }
 .move-right{
-    transition: all 0.5 ease;
+    transition: all 0.5s ease;
     left: 0;
+}
+.move-left{
+    transition: all 0.5s ease;
+    right: 0!important;
 }
 .chapter-buttons, .open-chapter-buttons{
     transition: opacity 1s ease;
@@ -477,4 +487,69 @@ $deviceHeightMax: $deviceWidthMax/1.33;
     height: 0;
     opacity: 0;
     overflow-y: hidden;
+}
+
+// additional content from the right
+.additional-section{
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    z-index: $front;   
+    transition: all 0.7s ease;
+    @include mQ ($xl) {
+        z-index: $layer1;
+    }
+    .additional-content{
+        background: white;
+        padding: 0;
+        height: 100vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .close-addition{
+        margin: 20px;
+    }
+    .text-content{
+        padding: 0 10px 100px 10px;
+        @include mQ ($lg) {
+            padding: 0 50px 100px 50px;
+        }
+    }
+}
+
+// about section
+.about-logo{
+    @include mQ ($lg) {
+        height: 15vh;
+    }
+}
+
+// contact section
+#contacts{
+    .card{
+        margin: 10px;
+    }
+}
+
+// glossary
+span.gloss-link{
+    font-weight: bold;
+    text-decoration: underline;
+    color: $yellow;
+    &:hover{
+        cursor: pointer;
+    }
+}
+#glossary{
+    input, input:focus{
+        border-width: 0 0 1px 0;
+        box-shadow: 0 1px 0 0 $purple;
+        border-radius: 0;
+    }
+    .card{
+        margin-bottom: 10px;
+    }
+    .card.highlighted{
+        background: $yellow;
+    }
 }

@@ -20,6 +20,17 @@ const progressPercentage = document.querySelector('#progress-percentage');
 const progressPercentageBar = document.querySelector('.progress-detailed');
 const resetProgress = document.querySelector('#reset');
 
+// ADDITIONAL RESOURCES MENU
+const additionalMenu = document.querySelector('.additional-section');
+const additionalScreen = document.querySelector('#additional-screen');
+const additionalOptions = additionalMenu.querySelectorAll('.text-content');
+const additionalScrollable = document.querySelector('.additional-content');
+
+// THE GLOSSARY
+const glossaryForm = document.querySelector('#glossary-search-form');
+const glossaryText = document.querySelector('#glossary');
+const glossarySearch = document.querySelector('#glossary-search-form input');
+
 // LANDING PAGE
 const openingScreens = document.querySelectorAll('.min-screen');
 const title = document.querySelector('#landing text');
