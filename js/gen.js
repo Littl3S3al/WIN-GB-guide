@@ -12,6 +12,10 @@ const mainMenuLinks = mainMenu.querySelectorAll('a');
 const mainScreen = document.querySelector('#mainScreen');
 const menuLable = document.querySelector('#menulable');
 
+const searchForm = document.querySelector('#keyword-search-form');
+const searchSpace = document.querySelector('#keyword-row');
+const searchFormInput = document.querySelector('#keyword-search-form input');
+
 // THE PROGRESS MENU
 const progressMenu = document.querySelector('#progress-menu-container');
 const progressScreen = document.querySelector('#progress-screen');

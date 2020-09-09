@@ -1,3 +1,5 @@
+// glossary search form
+
 glossarySearch.addEventListener('keyup', () => {
     let searchTerm = glossarySearch.value.toUpperCase();
     glossSearch(searchTerm);
@@ -16,5 +18,50 @@ const glossSearch = (searchTerm) => {
 }
 
 glossaryForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+})
+
+// main menu search form
+searchFormInput.addEventListener('keyup', () => {
+    searchSpace.innerHTML = '';
+    let searchTerm = searchFormInput.value.toUpperCase();
+    if(searchTerm){
+        chapters.forEach(chapter => {
+            let link = '';
+            if(chapter.textContent.toUpperCase().includes(searchTerm)){
+                let divs = chapter.querySelector('.chapter-text-inner').querySelectorAll('div');
+                divs.forEach(div => {
+                    let divContent = div.textContent.toUpperCase();
+                    if(divContent.includes(searchTerm)){
+                        let n = divContent.indexOf(searchTerm);
+                        let result = div.textContent.substring(n-10, n +100);
+                        link += `
+                        <p>
+                            <span class="chapter-shortcut" data-target="${chapter.dataset.content}" data-shortcut="${div.id}">${result}...</span>
+                        </p>
+                        <hr>
+                        `;
+                    }
+                })
+                searchSpace.innerHTML += `
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>${chapter.dataset.title}</h2>
+                            <div class="card">
+                                <div class="card-body">
+                                    <p>${link}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        })
+    }
+    
+    
+})
+
+searchFormInput.addEventListener('submit', (e) => {
     e.preventDefault();
 })

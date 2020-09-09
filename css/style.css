@@ -53,6 +53,45 @@ i.ex {
 nav .menu .accordion {
   padding-top: 3vh;
 }
+nav form {
+  color: white;
+}
+nav form i {
+  font-size: 1.2em;
+}
+nav form input, nav form input:focus {
+  background: #500878 !important;
+  color: white !important;
+  border-width: 0 0 1px 0 !important;
+  border-color: #f2a900 !important;
+  box-shadow: 0 1px 0 0 white !important;
+  border-radius: 0 !important;
+  font-size: 1.2em !important;
+}
+nav form input::placeholder, nav form input:focus::placeholder {
+  color: white !important;
+  font-size: 1.2em !important;
+}
+nav .card {
+  background-color: #700ba8;
+  color: white !important;
+  border: 0;
+  margin-bottom: 10px;
+}
+nav .card .card-body {
+  color: white !important;
+}
+nav .card .card-body h2 {
+  color: white;
+  font-weight: bold;
+}
+nav .card .card-body p {
+  font-size: 1em;
+}
+nav .card .card-body p:hover {
+  cursor: pointer;
+  color: #f2a900;
+}
 nav ul {
   list-style: none;
   padding: 0;

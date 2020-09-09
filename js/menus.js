@@ -65,6 +65,8 @@ const menuCloseFunc = () => {
 
 // open and close main menu
 const openMain = () => {
+    searchForm.reset();
+    searchSpace.innerHTML = '';
     if(!menuOpen){
         menuOpenFunc('Menu');      
         removeClass([mainMenu], 'offscreen');
@@ -112,7 +114,7 @@ mainScreen.addEventListener('click', () => {
     openMain();
 });
 mainMenu.addEventListener('click', e => {
-    if(e.target.tagName === 'A' || e.target.tagName === 'LI'){
+    if(e.target.tagName === 'A' || e.target.tagName === 'LI' || e.target.classList.contains('chapter-shortcut')){
         openMain();
     }
 });
