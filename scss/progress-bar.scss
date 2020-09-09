@@ -10,6 +10,7 @@
         width: 100%;
         height: 1vh;
         border-radius: 0;
+        margin: 0;
         .progress{
             background: $red;
             border-radius: 0;
@@ -22,16 +23,18 @@
 #progress{
     position: fixed;
     z-index: $layer4;
-    bottom: 3vh;
-}
+    bottom: 0;
+    background: white;
+    border-radius: 25px 25px 0 0;
+    margin-left: 4%;
+} 
 
 .line-container { 
-    display: flex;
     width: 100%;
     
     .progress-line {
           position: relative;
-          margin: 0 auto;
+          margin: 30px auto;
           border-radius: 10px;
           width: 90%;
           background: grey;
@@ -45,6 +48,7 @@
             height: 100%;
             background: black;
             transition: width 1s ease-in-out;
+            
         }
     }   
       

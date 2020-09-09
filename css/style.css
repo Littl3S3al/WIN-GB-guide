@@ -255,6 +255,7 @@ nav hr {
   width: 100%;
   height: 1vh;
   border-radius: 0;
+  margin: 0;
 }
 #micro-progress .progress-line .progress {
   background: #b11116;
@@ -264,16 +265,18 @@ nav hr {
 #progress {
   position: fixed;
   z-index: 140;
-  bottom: 3vh;
+  bottom: 0;
+  background: white;
+  border-radius: 25px 25px 0 0;
+  margin-left: 4%;
 }
 
 .line-container {
-  display: flex;
   width: 100%;
 }
 .line-container .progress-line {
   position: relative;
-  margin: 0 auto;
+  margin: 30px auto;
   border-radius: 10px;
   width: 90%;
   background: grey;
@@ -326,11 +329,13 @@ nav hr {
 }
 html {
   scroll-behavior: smooth;
+  max-width: 100vw;
 }
 
 body {
   font-size: 1em;
   font-family: "Avenir LT W04_45 Book1475512";
+  padding: 0;
 }
 
 body.modal-open {
@@ -522,7 +527,7 @@ header img {
 }
 @media only screen and (min-width: 1200px) {
   header img {
-    width: 15vw;
+    width: 12vw;
   }
 }
 header #menus button {
@@ -581,6 +586,7 @@ header #menus button {
   border-radius: 10px;
   padding: 5px 10px;
   margin: 2px 4px;
+  animation-duration: 2s;
 }
 @media only screen and (min-width: 768px) {
   .min-screen {

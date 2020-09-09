@@ -14,6 +14,9 @@
     <!-- animate on scroll -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <!-- link to custom stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -34,7 +37,7 @@
     </div>
 
     <!-- nav bar -->
-    <header class="container-fluid">
+    <header class="container-fluid animate__animated animate__fadeInDown animate__delay-1s">
         <div class="row d-flex justify-content-between">
             <!-- main logo -->
             <div id="logo" class="col-1">
@@ -43,7 +46,7 @@
                 </a>
             </div>
             <!-- all menu buttons -->
-            <div id="menus" class="col-xs-10 d-flex justify-content-end align-items-center">
+            <div id="menus" class="col-xs-19 d-flex justify-content-end align-items-center">
                 <!-- language change button -->
                 <button id="lang" class="btn btn-primary">
                     عربى
@@ -127,11 +130,11 @@
         </div>
     </div>
     <!-- progress bar big screen -->
-    <div id="progress" class="container-fluid d-none d-xl-block">
+    <div  id="entire-progress" class="container-fluid d-none d-xl-block">
 
         <!-- bigger screen progress bar -->
         <div class="row">
-            <div class="col-10 offset-1 col-xl-6">
+            <div id="progress" class="entire-container col-xl-6 animate__animated animate__fadeInUp animate__delay-1s">
                 <div class='line-container'>
 
                     <div class='progress-line'>
@@ -180,39 +183,39 @@
         <div class="row">
             <!-- screens -->
             <div class="col-12 col-lg-9 text-center">
-                <div class="min-screen">
+                <div class="min-screen animate__animated animate__fadeInTopLeft">
                     <div class="min-min-screen">
                         <a href="#chapter-1" class="number"><span>1.</span></a>
                     </div>
                 </div>
-                <div class="min-screen">
+                <div class="min-screen animate__animated animate__fadeInTopRight">
                     <div class="min-min-screen">
                         <a href="#chapter-2" class="number"><span>2.</span></a>
                     </div>
                 </div>
-                <div class="min-screen">
+                <div class="min-screen animate__animated animate__fadeInLeft">
                     <div class="min-min-screen">
                         <a href="#chapter-3" class="number"><span>3.</span></a>
                     </div>
                 </div>
-                <div class="min-screen">
+                <div class="min-screen animate__animated animate__fadeInRight">
                     <div class="min-min-screen">
                         <a href="#chapter-4" class="number"><span>4.</span></a>
                     </div>
                 </div>
-                <div class="min-screen">
+                <div class="min-screen animate__animated animate__fadeInBottomLeft">
                     <div class="min-min-screen">
                         <a href="#chapter-5" class="number"><span>5.</span></a>
                     </div>
                 </div>
-                <div class="min-screen">
+                <div class="min-screen animate__animated animate__fadeInBottomRight">
                     <div class="min-min-screen">
                         <a href="#chapter-6" class="number"><span>6.</span></a>
                     </div>
                 </div>
             </div>
 
-            <div id="landingText" class="col-12 col-lg-3">
+            <div id="landingText" class="col-12 col-lg-3 animate__animated animate__fadeInRight animate__delay-1s">
                 <div>
                     <h1>Gender<br>Balance<br>Guide</h1>
                     <h1 class="small">for Media</h1>
@@ -225,7 +228,7 @@
 
 
     <!-- chapters -->
-    <section id="chapter-1" class="container-fluid">
+    <section id="chapter-1" class="container-fluid" data-aos="fade-up">
         <div class="spacer"></div>
         <div class="row">
 
@@ -278,26 +281,31 @@
                 <!-- chapter row -->
                 <div class="row m-xl-5">
                     <!-- number -->
-                    <div class="col-12 text-left mb-3">
+                    <div class="col-12 text-left mb-3" data-aos="fade-up">
                         <div class="number">
                             <span>1.</span>
                         </div>
                     </div>
                     <!-- chapter intro -->
-                    <div class="col-12 chapter-intro-content">
+                    <div class="col-12 chapter-intro-content" data-aos="fade-up">
                         <h2>Why gender balance is important</h2>
                         <p>
                             The reasons why media organisations and media professionals should be working to increase gender balance in their content.
                         </p>
                         <br>
                         <!-- chapter buttons -->
-                        <div class="chapter-buttons">
-                            <button class="mb-3 btn btn-danger read-it" data-target="chapter-1">
+                        <div class="chapter-buttons" data-aos="fade-up" data-aos-offset="100">
+                            <button class="mb-3 btn btn-danger read-it" data-target="chapter-1" data-aos="fade-up">
                                 read it
                             </button>
+
                             <br>
-                            <button class="chapter-shortcut btn btn-warning" data-target="chapter-1" data-shortcut="section-6"><i class="fas fa-question"></i> do the quiz</button>
-                            <button class="chapter-shortcut btn btn-primary" data-target="chapter-1" data-shortcut="section-5">infographic</button>
+
+                            <div data-aos="fade-up" data-aos-offset="100">
+                                <button class="chapter-shortcut btn btn-warning" data-target="chapter-1" data-shortcut="section-6"><i class="fas fa-question"></i> do the quiz</button>
+
+                                <button class="chapter-shortcut btn btn-primary" data-target="chapter-1" data-shortcut="section-5">infographic</button>
+                            </div>
                         </div>
                         <!-- buttons which only appear when chapter opens -->
                         <div class="open-chapter-buttons hidden-buttons">
@@ -321,12 +329,12 @@
             </div>
 
             <div class="col-12 col-md-10 offset-md-1 col-xl-7 offset-xl-0 chapter-image" data-content="chapter-1">
-                <div class="placeholder"></div>
+                <div class="placeholder" data-aos="fade-up"></div>
             </div>
         </div>
     </section>
 
-    <section id="chapter-2" class="container-fluid">
+    <section id="chapter-2" class="container-fluid" data-aos="fade-up">
         <div class="spacer"></div>
         <div class="row">
 
@@ -379,7 +387,7 @@
                 <!-- chapter row -->
                 <div class="row m-xl-5">
                     <!-- number -->
-                    <div class="col-12 text-left mb-3">
+                    <div class="col-12 text-left mb-3" data-aos="fade-up">
                         <div class="number">
                             <span>2.</span>
                         </div>
@@ -391,13 +399,15 @@
                             What it means to ‘gender stereotype’. We need to understand the problem before we can fix it.
                         </p>
                         <!-- chapter buttons -->
-                        <div class="chapter-buttons">
-                            <button class="mb-3 btn btn-danger read-it" data-target="chapter-2">
+                        <div class="chapter-buttons"  data-aos="fade-up" data-aos-offset="100">
+                            <button class="mb-3 btn btn-danger read-it" data-target="chapter-2" data-aos="fade-up">
                                 read it
                             </button>
                             <br>
-                            <button class="chapter-shortcut btn btn-warning" data-target="chapter-2" data-shortcut="section-6"><i class="fas fa-question"></i> do the quiz</button>
-                            <button class="chapter-shortcut btn btn-primary" data-target="chapter-2" data-shortcut="section-5">infographic</button>
+                            <div data-aos="fade-up" data-aos-offset="100">
+                                <button class="chapter-shortcut btn btn-warning" data-target="chapter-2" data-shortcut="section-6"><i class="fas fa-question"></i> do the quiz</button>
+                                <button class="chapter-shortcut btn btn-primary" data-target="chapter-2" data-shortcut="section-5">infographic</button>
+                            </div>
                         </div>
                         <!-- buttons which only appear when chapter opens -->
                         <div class="open-chapter-buttons hidden-buttons">
@@ -419,12 +429,12 @@
             </div>
 
             <div class="col-12 col-md-10 offset-md-1 col-xl-7 offset-xl-0 chapter-image" data-content="chapter-2">
-                <div class="placeholder"></div>
+                <div class="placeholder" data-aos="fade-up"></div>
             </div>
         </div>
     </section>
 
-    <section id="chapter-3" class="container-fluid">
+    <section id="chapter-3" class="container-fluid" data-aos="fade-up">
         <div class="spacer"></div>
         <div class="row">
 
@@ -477,25 +487,27 @@
                 <!-- chapter row -->
                 <div class="row m-xl-5">
                     <!-- number -->
-                    <div class="col-12 text-left mb-3">
+                    <div class="col-12 text-left mb-3" data-aos="fade-up">
                         <div class="number">
                             <span>3.</span>
                         </div>
                     </div>
                     <!-- chapter intro -->
-                    <div class="col-12 chapter-intro-content">
+                    <div class="col-12 chapter-intro-content" data-aos="fade-up">
                         <h2>Actions to improve gender balance</h2>
                         <p>
                             Practical suggestions to improve gender balance in content.
                         </p>
                         <!-- chapter buttons -->
-                        <div class="chapter-buttons">
-                            <button class="mb-3 btn btn-danger read-it" data-target="chapter-3">
+                        <div class="chapter-buttons" data-aos="fade-up">
+                            <button class="mb-3 btn btn-danger read-it" data-target="chapter-3" data-aos="fade-up">
                                 read it
                             </button>
                             <br>
-                            <button class="chapter-shortcut btn btn-warning" data-target="chapter-3" data-shortcut="section-6"><i class="fas fa-question"></i> do the quiz</button>
-                            <button class="chapter-shortcut btn btn-primary" data-target="chapter-3" data-shortcut="section-5">infographic</button>
+                            <div data-aos="fade-up" data-aos-offset="100">
+                                <button class="chapter-shortcut btn btn-warning" data-target="chapter-3" data-shortcut="section-6"><i class="fas fa-question"></i> do the quiz</button>
+                                <button class="chapter-shortcut btn btn-primary" data-target="chapter-3" data-shortcut="section-5">infographic</button>
+                            </div>
                         </div>
                         <!-- buttons which only appear when chapter opens -->
                         <div class="open-chapter-buttons hidden-buttons">
@@ -517,7 +529,7 @@
             </div>
 
             <div class="col-12 col-md-10 offset-md-1 col-xl-7 offset-xl-0 chapter-image" data-content="chapter-3">
-                <div class="placeholder"></div>
+                <div class="placeholder" data-aos="fade-up"></div>
             </div>
         </div>
     </section>

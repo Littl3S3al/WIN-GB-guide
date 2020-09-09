@@ -20,6 +20,10 @@ const progressPercentage = document.querySelector('#progress-percentage');
 const progressPercentageBar = document.querySelector('.progress-detailed');
 const resetProgress = document.querySelector('#reset');
 
+// LANDING PAGE
+const openingScreens = document.querySelectorAll('.min-screen');
+const title = document.querySelector('#landing text');
+
 // CHAPTER CONTENT
 const nextButtons = document.querySelectorAll('.btn-next');
 const readitButtons = document.querySelectorAll('.read-it');
@@ -72,7 +76,7 @@ const addScroll = () => {
 
 // add large class to all buttons if window size is appropriate
 const largeButtons = () => {
-    if(window.innerWidth > 992){
+    if(window.innerWidth >= 992){
         addClass([mainMenuBtn, progressMenuBtn, langBtn], 'btn-lg');
          nextButtons.forEach(button => {
              addClass([button], 'btn-lg');
@@ -92,13 +96,32 @@ const largeButtons = () => {
 };
 
 
+// animate all landing page elements for screen sizes
+const animateIntro = () => {
+    if(window.innerWidth >= 992){
+        removeClass([openingScreens[1]], 'animate__fadeInTopRight');
+        addClass([openingScreens[1]], 'animate__fadeInDown');
+
+        removeClass([openingScreens[2]], 'animate__fadeInLeft');
+        addClass([openingScreens[2]], 'animate__fadeInTopRight');
+
+        removeClass([openingScreens[3]], 'animate__fadeInRight');
+        addClass([openingScreens[3]], 'animate__fadeInBottomLeft');
+
+        removeClass([openingScreens[4]], 'animate__fadeInBottomLeft');
+        addClass([openingScreens[4]], 'animate__fadeInUp');
+    }
+}
+
+
 
 
 // INITIAL ACTIONS
 
 // make buttons large on big screen
 largeButtons();
-
+// animate screens correctly on big screen
+animateIntro();
 
 
 // event listener to check window resize
@@ -107,22 +130,6 @@ window.addEventListener('resize', () => {
 });
 
 
-// prevent zoom
-// $(document).keydown(function(event) {
-//     if (event.ctrlKey==true && (event.which == '61' || event.which == '107' || event.which == '173' || event.which == '109'  || event.which == '187'  || event.which == '189'  ) ) {
-//             event.preventDefault();
-//          }
-//         // 107 Num Key  +
-//         // 109 Num Key  -
-//         // 173 Min Key  hyphen/underscor Hey
-//         // 61 Plus key  +/= key
-// });
-
-// $(window).bind('mousewheel DOMMouseScroll', function (event) {
-//         if (event.ctrlKey == true) {
-//         event.preventDefault();
-//         }
-// });
 
 
 
