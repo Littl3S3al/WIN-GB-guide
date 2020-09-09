@@ -27,6 +27,7 @@ chapterContent.forEach(chapter => {
         <div class="row" id="progress-section-${chapter.number}">
             <a href="#chapter-${chapter.number}" class="menu-link" data-target="chapter-${chapter.number}">${chapter.number}.</a>
         </div>
+        <br>
     `;
 })
 chapterContent.forEach(chapter => {
@@ -40,8 +41,9 @@ chapterContent.forEach(chapter => {
         // add the first concept, the infographic and the quiz to the progress menu
         if(i === 1){
             document.querySelector(`#progress-section-${chapter.number}`).innerHTML += `
-            <button class="chapter-shortcut btn btn-warning btn-progress-icon" id="progress-chapter-${chapter.number}" data-target="chapter-${chapter.number}" data-shortcut="section-1"><i class="fas fa-align-left"></i></button>
+            <button class="chapter-shortcut btn btn-warning btn-progress-icon" id="chapter-${chapter.number}-section-${i}" data-target="chapter-${chapter.number}" data-shortcut="section-1"><i class="fas fa-align-left"></i></button>
             `;
+            chapterDetailProgress[chapter.number-1].push('section-' + i);
         } else if (concept.includes('infographic')){
             document.querySelector(`#progress-section-${chapter.number}`).innerHTML += `
             <button class="chapter-shortcut btn btn-warning btn-progress-icon" id="chapter-${chapter.number}-section-${i}" data-target="chapter-${chapter.number}" data-shortcut="section-${i}"><i class="fas fa-info"></i></button>

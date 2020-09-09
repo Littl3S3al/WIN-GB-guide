@@ -14,9 +14,11 @@ const retrieveProgressData = () => {
 const updateLocalStorage = () => {
     let allCompletedSections = progressMenu.querySelectorAll('.completed');
     chapterTracker.detailChapters = [];
-    allCompletedSections.forEach(section => {
-        chapterTracker.detailChapters.push(section.id);
-    })
+    if(allCompletedSections){
+        allCompletedSections.forEach(section => {
+            chapterTracker.detailChapters.push(section.id);
+        })
+    }
 };
 
 const updateProgress = () => {

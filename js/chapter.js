@@ -44,10 +44,10 @@ const openChapter = () => {
     whichChapter = current;
 
      // make first progress completed
-     addClass([progressMenu.querySelector(`#progress-${current}`)], 'completed');
+    //  addClass([progressMenu.querySelector(`#progress-${current}`)], 'completed');
  
      // event lister for scrolling and if elements come into view then make their progress completed
-     chapter.addEventListener('scroll', () => {
+     chapter.addEventListener('wheel', () => {
          let allSections = chapter.querySelectorAll('h1');
          allSections.forEach(section => {
              if(section.getBoundingClientRect().bottom <= window.innerHeight*0.8 && section.getBoundingClientRect().top >= 0){
@@ -59,6 +59,19 @@ const openChapter = () => {
              }
          })
      });
+
+     chapter.addEventListener('touchmove', () => {
+        let allSections = chapter.querySelectorAll('h1');
+        allSections.forEach(section => {
+            if(section.getBoundingClientRect().bottom <= window.innerHeight*0.8 && section.getBoundingClientRect().top >= 0){
+                let sectionNo = section.id;
+                let id = progressMenu.querySelector(`#${current}-${sectionNo}`);
+                if(id){
+                    addClass([id], 'completed');
+                }
+            }
+        })
+    });
 
     //  update percentage on the progress menu
      updatePercentage();
