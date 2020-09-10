@@ -30,13 +30,13 @@ const lines = () => {
 
             <circle cx="${500 + 10 - 21}" cy="${window.innerHeight * 2 + 200}" r="25" fill="#1f8da2"/>
 
-            <circle cx="${point3.left + point3.width/2}" cy="${point3.bottom - 300}" r="25" fill="#1f8da2"/>
+            <circle cx="${point3.left + point3.width/2}" cy="${point3.bottom - 100}" r="25" fill="#1f8da2"/>
 
             <path d="
-            M ${point3.left + point3.width/2} ${point3.bottom - 300}
+            M ${point3.left + point3.width/2} ${point3.bottom - 100}
             V ${window.innerHeight * 3} ${blt}
             H ${window.innerWidth -40} ${trt}
-            V ${point4.top + point4.height/4 + 50} ${brt}
+            V ${point4.top + point4.height/2} ${brt}
             H ${point4.right - 100}
             " fill="transparent" stroke="#1f8da2" stroke-width="10"/>
 

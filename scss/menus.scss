@@ -77,7 +77,9 @@ nav{
             border-color: white!important;
             box-shadow: 0 1px 0 0 white!important;
             border-radius: 0!important;
-            font-size: 1.2em!important;
+            @include mQ ($xl) {
+                font-size: 1.2em!important;
+            }
             &::placeholder{
                 color: white!important;
             }
