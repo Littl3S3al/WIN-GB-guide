@@ -25,6 +25,12 @@
 </head>
 <body>
 
+    <div id="lines" class="d-none d-xl-block">
+        <svg width="99vw" height="400vh" xmlns="http://www.w3.org/2000/svg">
+
+        </svg>
+    </div>
+
     <!-- loading screen -->
     <div class="load container-fluid">
         <div id="stripes"><div class="stripe red"></div><div class="stripe teal" style="left: 25vw"></div><div class="stripe yellow" style="left: 50vw"></div><div class="stripe purple" style="left: 75vw"></div>
@@ -32,7 +38,6 @@
 
         <div id="loading" class="d-flex justify-content-center align-items-center">
             <img src="assets/loader.gif" width="80px">
-            </div>
         </div>
     </div>
 
@@ -260,7 +265,7 @@
                     <h1>Gender Balance Guide</h1>
                     <h1 class="small">&mdash; for Media &mdash;</h1>
                     <br>
-                    <a href="#chapter-1" class="btn-next btn btn-primary">Begin <i class="fas fa-arrow-down"></i></a>
+                    <a href="#chapter-1" class="btn-next btn-begin btn btn-primary">Begin <i class="fas fa-arrow-down"></i></a>
                 </div>
             </div>
         </div>
@@ -394,8 +399,8 @@
 
             <!-- chapter cover image -->
             <div class="col-12 col-md-10 offset-md-1 col-xl-7 offset-xl-0 chapter-image text-center" data-content="chapter-1">
-                <div class="placeholder" data-aos="fade-up" style="background: url('/assets/images/placeholder-img-1.svg') center center no-repeat; background-size: contain;"></div>
-                <a href="#chapter-2" class="btn-next btn btn-primary">Next <i class="fas fa-arrow-down"></i></a>
+                <div class="placeholder" style="background: url('/assets/images/placeholder-img-1.svg') center center no-repeat; background-size: contain;"></div>
+                <a href="#chapter-2" class="btn-next btn-line-link btn btn-primary">Next <i class="fas fa-arrow-down"></i></a>
             </div>
         </div>
     </section>
@@ -949,6 +954,9 @@
 
     <!-- search forms -->
     <script src="js/search.js"></script>
+
+    <!-- draw lines -->
+    <script src="js/lines.js"></script>
 
 </body>
 </html>

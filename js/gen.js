@@ -39,6 +39,11 @@ const glossarySearch = document.querySelector('#glossary-search-form input');
 const openingScreens = document.querySelectorAll('.min-screen');
 const title = document.querySelector('#landing text');
 
+// LINES
+const linesDiv = document.querySelector('#lines');
+const placeholders = document.querySelectorAll('.placeholder'); 
+const lineButtons = document.querySelectorAll('.btn-line-link');
+
 // CHAPTER CONTENT
 const nextButtons = document.querySelectorAll('.btn-next');
 const readitButtons = document.querySelectorAll('.read-it');
@@ -141,22 +146,3 @@ window.addEventListener('resize', () => {
     location.reload();
 });
 
- 
-
-
-
-document.onmouseover = function() {
-    //User's mouse is inside the page.
-    window.innerDocClick = true;
-}
-
-document.onmouseleave = function() {
-    //User's mouse has left the page.
-    window.innerDocClick = false;
-}
-
-window.onhashchange = function() {
-    if (!window.innerDocClick) {
-        alert('back button')
-    }
-}

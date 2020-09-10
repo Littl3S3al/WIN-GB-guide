@@ -114,6 +114,7 @@ p{
     opacity: 1;
     transition: opacity 0.5s ease;
 }
+
 .offscreen {
     left: 100vw;
     transition: left 0.8s ease;
@@ -572,4 +573,11 @@ span.gloss-link{
     .card.highlighted{
         background: $yellow;
     }
+}
+
+#lines{
+    position: absolute;
+    z-index: $back;
+    opacity: 1;
+    transition: all 1s ease;
 }

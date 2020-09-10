@@ -18,6 +18,8 @@ const openChapter = () => {
     let intro = findChapterContent(current, intros);
     let cover = findChapterContent(current, covers);
 
+    linesDiv.style.opacity = 0;
+
     // animations for large screen
     if(window.innerWidth >= 1200){
         // hide intro text
@@ -26,6 +28,7 @@ const openChapter = () => {
         });
         // make intro number small
         addClass([intro.querySelector('.number')], 'number-smaller');
+
         // swap out buttons
         setTimeout(() => {
             addClass([intro.querySelector('.chapter-buttons')], 'hidden-buttons');
@@ -106,6 +109,7 @@ const closeChapter = () => {
     removeClass([intro.querySelector('.chapter-buttons')], 'hidden-buttons');
     addClass([intro.querySelector('.open-chapter-buttons')], 'hidden-buttons');
     removeClass([mainMenuBtn, progressMenuBtn, langBtn], 'btn-dark');
+    linesDiv.style.opacity = 1;
 
     
     removeClass([chapter], 'move-right');
@@ -239,6 +243,10 @@ closeChapterBtns.forEach(btn => {
     })
 })
 
+
+
+
+// detect back button
 document.onmouseover = function() {
     //User's mouse is inside the page.
     window.innerDocClick = true;
@@ -249,8 +257,6 @@ document.onmouseleave = function() {
     window.innerDocClick = false;
 }
 
-
-// detect back button
 window.onhashchange = function() {
     if (!window.innerDocClick) {
         closeChapter();

@@ -978,4 +978,11 @@ span.gloss-link:hover {
   background: #f2a900;
 }
 
+#lines {
+  position: absolute;
+  z-index: -100;
+  opacity: 1;
+  transition: all 1s ease;
+}
+
 /*# sourceMappingURL=style.css.map */
