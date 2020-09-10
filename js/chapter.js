@@ -238,3 +238,21 @@ closeChapterBtns.forEach(btn => {
         closeChapter();
     })
 })
+
+document.onmouseover = function() {
+    //User's mouse is inside the page.
+    window.innerDocClick = true;
+}
+
+document.onmouseleave = function() {
+    //User's mouse has left the page.
+    window.innerDocClick = false;
+}
+
+
+// detect back button
+window.onhashchange = function() {
+    if (!window.innerDocClick) {
+        closeChapter();
+    }
+}

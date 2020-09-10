@@ -105,6 +105,8 @@ const largeButtons = () => {
 };
 
 
+
+
 // animate all landing page elements for screen sizes
 const animateIntro = () => {
     if(window.innerWidth >= 992){
@@ -139,7 +141,22 @@ window.addEventListener('resize', () => {
     location.reload();
 });
 
+ 
 
 
 
+document.onmouseover = function() {
+    //User's mouse is inside the page.
+    window.innerDocClick = true;
+}
 
+document.onmouseleave = function() {
+    //User's mouse has left the page.
+    window.innerDocClick = false;
+}
+
+window.onhashchange = function() {
+    if (!window.innerDocClick) {
+        alert('back button')
+    }
+}

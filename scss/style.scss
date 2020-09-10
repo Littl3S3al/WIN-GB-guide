@@ -453,7 +453,7 @@ $deviceHeightMax: $deviceWidthMax/1.33;
 .placeholder{
     background: $light-grey;
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     margin: 20px 0;
     @include mQ ($xl) {
         margin-left: 5%;
