@@ -22,13 +22,14 @@
 html{
     scroll-behavior: smooth;
     max-width: 100vw;
+    overflow-x: hidden;
+    @include mQ ($xl) {
+        overflow-x: inherit;
+    }
 }
 body{
     font-size: 1em;
     font-family:"Avenir LT W04_45 Book1475512";
-    padding: 0;
-    max-width: 100vw;
-    overflow-x: hidden;
 }
 body.modal-open{
     padding-right: 15px;
@@ -45,11 +46,13 @@ body.modal-open{
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $yellow; 
+    background: $teal; 
+    border-radius: 5px;
+    border: 3px solid $light-grey;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: $yellow-hover; 
+    background: $teal-hover; 
 }
 
 // font styles
@@ -68,7 +71,8 @@ h1.small{
     }
 }
 h2{
-    font-size: 1em;
+    font-family:"Avenir LT W04_65 Medium1475536";
+    font-size: 2em;
     color: $dark-grey;
     @include mQ ($xl) {
         font-size: 1.5em;
@@ -362,6 +366,7 @@ $deviceHeightMax: $deviceWidthMax/1.33;
     background: $dark-grey;
     height: 100vh!important;
     width: 100vw;
+    overflow-x: hidden;
     z-index: $layer1;
     position: fixed;
     top: 0;
@@ -371,21 +376,21 @@ $deviceHeightMax: $deviceWidthMax/1.33;
     scroll-behavior: smooth;
     overflow-y: scroll;
     &::-webkit-scrollbar {
-        width: 10px;
+        display: none;
     }
     /* Handle */
     &::-webkit-scrollbar-thumb {
-        background: black; 
-    }
-
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-        background: $light-grey; 
+        border: 2px solid $light-grey;
     }
     
     @include mQ ($xl) {
         width: 57vw;
         z-index: $front;
+        &::-webkit-scrollbar {
+            display: block;
+            width: 10px;
+        }
+        
     }
     // inside the chapter styles
     .close-section{
@@ -476,10 +481,25 @@ $deviceHeightMax: $deviceWidthMax/1.33;
 .open-chapter-buttons{
     button{
         margin-top: 10px;
+        white-space: normal;
+        max-width: 100%;
+        text-align: left;
+        padding: 10px 20px;
     }
     .navigationBtns{
         position: fixed;
         bottom: 20px;
+    }
+}
+.open-chapter-buttons-mobile{
+    button{
+        margin-top: 10px;
+        outline: none;
+        border: none;
+        white-space: normal;
+        max-width: 100%;
+        text-align: left;
+        padding: 10px 20px;
     }
 }
 .hidden-buttons{

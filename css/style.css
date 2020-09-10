@@ -2,7 +2,7 @@
 #menulable {
   color: white;
   margin-right: 20px;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 @media only screen and (min-width: 1200px) {
   #menulable {
@@ -42,7 +42,9 @@ i.ex {
 }
 
 .menu-bar {
+  margin: 0;
   height: 12vh;
+  top: 0;
 }
 
 .screen {
@@ -50,47 +52,45 @@ i.ex {
   height: 100vh;
 }
 
-nav .menu .accordion {
-  font-size: 0.8em;
-  padding-top: 3vh;
+nav {
+  font-size: 1.2em;
 }
-@media only screen and (min-width: 992px) {
-  nav .menu .accordion {
-    font-size: 1em;
+nav .menu {
+  padding: 0 20px;
+}
+@media only screen and (min-width: 1200px) {
+  nav .menu {
+    padding: 0 100px;
   }
 }
+nav .menu .accordion {
+  padding-top: 3vh;
+}
 nav form {
+  padding-top: 50px;
   padding-left: 20px;
   color: white;
-}
-nav form i {
-  font-size: 1.2em;
 }
 nav form input, nav form input:focus {
   background: #500878 !important;
   color: white !important;
   border-width: 0 0 1px 0 !important;
-  border-color: #f2a900 !important;
+  border-color: white !important;
   box-shadow: 0 1px 0 0 white !important;
   border-radius: 0 !important;
   font-size: 1.2em !important;
 }
 nav form input::placeholder, nav form input:focus::placeholder {
   color: white !important;
-  font-size: 1.2em !important;
 }
 nav .card {
   background-color: #700ba8;
-  color: white !important;
+  color: white;
   border: 0;
   margin-bottom: 10px;
 }
 nav .card .card-body {
   color: white !important;
-}
-nav .card .card-body h2 {
-  color: white;
-  font-weight: bold;
 }
 nav .card .card-body p {
   font-size: 1em;
@@ -101,13 +101,11 @@ nav .card .card-body p:hover {
 }
 nav ul {
   list-style: none;
-  padding: 0;
+  padding: 5px 0 0 20px;
 }
 nav ul li {
-  padding: 5px 0 5px 50px;
   color: white;
   transition: all 0.5s ease;
-  font-size: 1.1em;
 }
 nav ul li:hover {
   color: #f2a900;
@@ -124,13 +122,19 @@ nav a:hover {
 nav hr {
   border-top: 1px solid white;
 }
+nav .btn-light {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .chapter-heading {
   margin: 5px 10px 20px 0;
   display: flex;
   align-items: top;
   justify-content: space-between;
-  font-size: 1em;
 }
 @media only screen and (min-width: 768px) {
   .chapter-heading {
@@ -148,7 +152,6 @@ nav hr {
   }
 }
 .chapter-heading a span {
-  font-size: 1.5em;
   margin-right: 20px;
 }
 .chapter-heading a, .chapter-heading span.expand {
@@ -156,14 +159,10 @@ nav hr {
   cursor: pointer;
   text-decoration: none;
   transition: all 0.5s ease;
-  font-size: 1.2em;
   font-weight: 700;
 }
 .chapter-heading a:hover, .chapter-heading span.expand:hover {
   color: #f2a900;
-}
-.chapter-heading span.expand {
-  font-size: 1.5em;
 }
 
 #progress-menu-container .menu-card .row {
@@ -376,14 +375,17 @@ nav hr {
 html {
   scroll-behavior: smooth;
   max-width: 100vw;
+  overflow-x: hidden;
+}
+@media only screen and (min-width: 1200px) {
+  html {
+    overflow-x: inherit;
+  }
 }
 
 body {
   font-size: 1em;
   font-family: "Avenir LT W04_45 Book1475512";
-  padding: 0;
-  max-width: 100vw;
-  overflow-x: hidden;
 }
 
 body.modal-open {
@@ -402,12 +404,14 @@ body.modal-open {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #f2a900;
+  background: #1f8da2;
+  border-radius: 5px;
+  border: 3px solid #b3b3b3;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #ffbe26;
+  background: #27b2cd;
 }
 
 h1 {
@@ -431,7 +435,8 @@ h1.small {
 }
 
 h2 {
-  font-size: 1em;
+  font-family: "Avenir LT W04_65 Medium1475536";
+  font-size: 2em;
   color: #4d4d4d;
 }
 @media only screen and (min-width: 1200px) {
@@ -757,6 +762,7 @@ header #menus button {
   background: #4d4d4d;
   height: 100vh !important;
   width: 100vw;
+  overflow-x: hidden;
   z-index: 1000;
   position: fixed;
   top: 0;
@@ -766,21 +772,21 @@ header #menus button {
   scroll-behavior: smooth;
   overflow-y: scroll;
   /* Handle */
-  /* Handle on hover */
 }
 .chapter-text::-webkit-scrollbar {
-  width: 10px;
+  display: none;
 }
 .chapter-text::-webkit-scrollbar-thumb {
-  background: black;
-}
-.chapter-text::-webkit-scrollbar-thumb:hover {
-  background: #b3b3b3;
+  border: 2px solid #b3b3b3;
 }
 @media only screen and (min-width: 1200px) {
   .chapter-text {
     width: 57vw;
     z-index: 2000;
+  }
+  .chapter-text::-webkit-scrollbar {
+    display: block;
+    width: 10px;
   }
 }
 .chapter-text .close-section {
@@ -883,10 +889,24 @@ header #menus button {
 
 .open-chapter-buttons button {
   margin-top: 10px;
+  white-space: normal;
+  max-width: 100%;
+  text-align: left;
+  padding: 10px 20px;
 }
 .open-chapter-buttons .navigationBtns {
   position: fixed;
   bottom: 20px;
+}
+
+.open-chapter-buttons-mobile button {
+  margin-top: 10px;
+  outline: none;
+  border: none;
+  white-space: normal;
+  max-width: 100%;
+  text-align: left;
+  padding: 10px 20px;
 }
 
 .hidden-buttons {

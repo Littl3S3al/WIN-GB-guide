@@ -37,7 +37,7 @@ searchFormInput.addEventListener('keyup', () => {
                         let result = div.textContent.substring(n-10, n + 200);
                         link += `
                         <p>
-                            <span class="chapter-shortcut" data-target="${chapter.dataset.content}" data-shortcut="${div.id}">${result}...</span>
+                            <span class="chapter-shortcut" data-target="${chapter.dataset.content}" data-shortcut="${div.id}">...${result}...</span>
                         </p>
                         <hr>
                         `;
@@ -46,7 +46,7 @@ searchFormInput.addEventListener('keyup', () => {
                 searchSpace.innerHTML += `
                     <div class="card">
                         <div class="card-body">
-                            <h2>${chapter.dataset.title}</h2>
+                            <h4>${chapter.dataset.title}</h4>
                             <div class="card">
                                 <div class="card-body">
                                     <p>${link}</p>
@@ -62,6 +62,6 @@ searchFormInput.addEventListener('keyup', () => {
     
 })
 
-searchFormInput.addEventListener('submit', (e) => {
+searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
 })

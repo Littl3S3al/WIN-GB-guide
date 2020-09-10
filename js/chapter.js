@@ -18,23 +18,30 @@ const openChapter = () => {
     let intro = findChapterContent(current, intros);
     let cover = findChapterContent(current, covers);
 
-    // hide intro text
-    intro.querySelectorAll('p').forEach(p => {
-        addClass([p], 'd-none');
-    });
-    // make intro number small
-    addClass([intro.querySelector('.number')], 'number-smaller');
-
+    // animations for large screen
+    if(window.innerWidth >= 1200){
+        // hide intro text
+        intro.querySelectorAll('p').forEach(p => {
+            addClass([p], 'd-none');
+        });
+        // make intro number small
+        addClass([intro.querySelector('.number')], 'number-smaller');
+        // swap out buttons
+        setTimeout(() => {
+            addClass([intro.querySelector('.chapter-buttons')], 'hidden-buttons');
+            removeClass([intro.querySelector('.open-chapter-buttons')], 'hidden-buttons');
+            addClass([mainMenuBtn, progressMenuBtn, langBtn], 'btn-dark');
+        }, 500)
+    }
+    
+    
     // scroll down to the chapter
     section.scrollIntoView();
 
-    // move chapter content, intro and cover to the left and swap buttons out
+    // move chapter content, intro and cover to the left
     setTimeout(() => {
         addClass([chapter], 'move-right')
         addClass([intro, cover], 'move-more-right');
-        addClass([intro.querySelector('.chapter-buttons')], 'hidden-buttons');
-        removeClass([intro.querySelector('.open-chapter-buttons')], 'hidden-buttons');
-        addClass([mainMenuBtn, progressMenuBtn, langBtn], 'btn-dark');
     }, 500);
     
     // stop body scroll
@@ -88,19 +95,22 @@ const closeChapter = () => {
     let currentNumber = parseInt(whichChapter.substring(whichChapter.length - 1, whichChapter.length));
     whichChapter = false;
 
+
     // show intro text
     intro.querySelectorAll('p').forEach(p => {
         removeClass([p], 'd-none');
     });
-
     // make intro number bg again
     removeClass([intro.querySelector('.number')], 'number-smaller');
-
+    // change chapter buttons back
     removeClass([intro.querySelector('.chapter-buttons')], 'hidden-buttons');
     addClass([intro.querySelector('.open-chapter-buttons')], 'hidden-buttons');
+    removeClass([mainMenuBtn, progressMenuBtn, langBtn], 'btn-dark');
+
+    
     removeClass([chapter], 'move-right');
     removeClass([intro, cover], 'move-more-right');
-    removeClass([mainMenuBtn, progressMenuBtn, langBtn], 'btn-dark');
+    
     addScroll();
 
     // chapter tracker function
@@ -108,7 +118,6 @@ const closeChapter = () => {
     updateLocalStorage();
     startProgressData();
     updateProgress();
-    // console.log(JSON.parse(localStorage.getItem('chapterTracker')));
        
 };
 

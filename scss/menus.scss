@@ -2,7 +2,7 @@
 #menulable{
     color: white;
     margin-right: 20px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     @include mQ ($xl){
         font-size: 2.5em;
     }
@@ -39,7 +39,9 @@ i.ex{
     }
 }
 .menu-bar{
+    margin: 0;
     height: 12vh;
+    top: 0;
 }
 .screen{
     background: rgba(255, 255, 255, 0.5);
@@ -49,50 +51,45 @@ i.ex{
 
 
 // main menu styling
+
+
 nav{
+    font-size: 1.2em;
     
     .menu{ 
+        padding: 0 20px;
+        @include mQ ($xl) {
+            padding: 0 100px;
+        }
         .accordion{
-            font-size: 0.8em;
             padding-top: 3vh;
-            @include mQ ($lg){
-                font-size: 1em;
-            }
         }
     }
 
     form{
+        padding-top: 50px;
         padding-left: 20px;
-        i{
-            font-size: 1.2em;
-        }
         color: white;
         input, input:focus{
             background: $purple!important;
             color: white!important;
             border-width: 0 0 1px 0!important;
-            border-color: $yellow!important;
+            border-color: white!important;
             box-shadow: 0 1px 0 0 white!important;
             border-radius: 0!important;
             font-size: 1.2em!important;
             &::placeholder{
                 color: white!important;
-                font-size: 1.2em!important;
             }
         }
     }
-
     .card{
         background-color: $purple-hover;
-        color: white!important;
+        color: white;
         border: 0;
         margin-bottom: 10px;
         .card-body{
             color: white!important;
-            h2{
-                color: white;
-                font-weight: bold;
-            }
             p{
                 font-size: 1em;
                 &:hover{
@@ -105,12 +102,10 @@ nav{
     
     ul{
         list-style: none;
-        padding: 0;
+        padding: 5px 0 0 20px;
         li{
-            padding: 5px 0 5px 50px;
             color: white;
             transition: all 0.5s ease;
-            font-size: 1.1em;
             &:hover{
                 color: $yellow;
                 text-decoration: none;
@@ -128,14 +123,22 @@ nav{
     hr{
         border-top: 1px solid white;
     }
+    .btn-light{
+        width: 50px;
+        height: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
     
 }
+
+
 .chapter-heading{
     margin: 5px 10px 20px 0;
     display: flex;
     align-items: top;
     justify-content: space-between;
-    font-size: 1em;
     @include mQ ($md) {
         margin: 5px 10px 5px 0;
         align-items: center;
@@ -147,7 +150,6 @@ nav{
             align-items: center;
         }
         span{
-            font-size: 1.5em;
             margin-right: 20px;
         }
     }
@@ -156,16 +158,16 @@ nav{
         cursor: pointer;
         text-decoration: none;
         transition: all 0.5s ease;
-        font-size: 1.2em;
         font-weight: 700;
         &:hover{
             color: $yellow
         }
     }
-    span.expand{
-        font-size: 1.5em;      
-    }
 }
+
+
+
+
 
 // progress menu styling
 #progress-menu-container{

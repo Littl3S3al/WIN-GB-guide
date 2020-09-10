@@ -93,20 +93,14 @@ const addScroll = () => {
 const largeButtons = () => {
     if(window.innerWidth >= 992){
         addClass([mainMenuBtn, progressMenuBtn, langBtn], 'btn-lg');
-         nextButtons.forEach(button => {
-             addClass([button], 'btn-lg');
-         });
-         readitButtons.forEach(button => {
-             addClass([button], 'btn-lg');
-         });
+        addClass(nextButtons, 'btn-lg');
+        addClass(readitButtons, 'btn-lg');
+        addClass(closeChapterBtns, 'btn-lg');
      } else {
         removeClass([mainMenuBtn, progressMenuBtn, langBtn], 'btn-lg');
-         nextButtons.forEach(button => {
-             removeClass([button], 'btn-lg');
-         });
-         readitButtons.forEach(button => {
-             removeClass([button], 'btn-lg');
-         });
+        removeClass(nextButtons, 'btn-lg');
+        removeClass(readitButtons, 'btn-lg');
+        removeClass(closeChapterBtns, 'btn-lg');
      }
 };
 
@@ -142,7 +136,7 @@ animateIntro();
 // event listener to check window resize
 window.addEventListener('resize', () => {
     largeButtons();
-    // location.reload();
+    location.reload();
 });
 
 

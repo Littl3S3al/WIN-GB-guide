@@ -101,7 +101,9 @@
     <!-- main menu -->
     <nav class="container-fluid menu-container offscreen">
         <div class="row">
+            <!-- white screen -->
             <div id="mainScreen" class="d-none d-md-block col-md-4 col-xl-7 screen"></div>
+            <!-- menu section -->
             <div class="col-12 col-md-8 col-xl-5 menu purple menu-card"> 
                 <div class="row sticky-top purple menu-bar"></div>
                 <div class="row">
@@ -130,14 +132,28 @@
                    
                 </div> <!--accordian end-->
                 <hr>
-                <ul>
-                    <li class="additional-link" data-target="about">About us</li>
-                    <li class="additional-link" data-target="contacts">Contacts</li>
-                    <li class="additional-link" data-target="what-to-expect">What to expect from this guide</li>
-                    <li class="additional-link" data-target="guide">Gender definition and a non-binary guide</li>
-                    <li class="additional-link" data-target="glossary">Glossary</li>
-                    
-                </ul>
+                <!-- additional links row -->
+                <div class="row">
+                    <div class="col-12">
+                        <ul>
+                            <li class="additional-link" data-target="about">About us</li>
+                            <li class="additional-link" data-target="contacts">Contacts</li>
+                            <li class="additional-link" data-target="what-to-expect">What to expect from this guide</li>
+                            <li class="additional-link" data-target="guide">Gender definition and a non-binary guide</li>
+                            <li class="additional-link" data-target="glossary">Glossary</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- social sharing -->
+                <div class="row">
+                    <div class="col-12 text-left my-5">
+                        <button class="btn btn-light"><i class="fab fa-facebook-f"></i></button>
+                        <button class="btn btn-light"><i class="fab fa-twitter"></i></button>
+                        <button class="btn btn-light"><i class="fab fa-instagram"></i></button>
+                        <button class="btn btn-light"><i class="fab fa-linkedin-in"></i></button>
+                        <button class="btn btn-light"><i class="fab fa-whatsapp"></i></button>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -253,21 +269,32 @@
 
 
     <!-- chapters -->
-    <section id="chapter-1" class="container-fluid" data-aos="fade-up">
+    <section id="chapter-1" class="container-fluid">
         <div class="spacer"></div>
         <div class="row">
 
-            <!-- chatper -->
+            <!-- chatper text -->
             <div class="chapter-text" data-content="chapter-1" data-title="Why gender balance is important">
                 <div class="sticky-top close-section text-right">
                     <div class="chapter-stripes">
                         <div class="chapter-stripe red"></div><div class="chapter-stripe teal" style="left: 25%"></div><div class="chapter-stripe yellow" style="left: 50%"></div><div class="chapter-stripe purple" style="left: 75%"></div>
                     </div>
-                    <button class="btn btn-lg btn-secondary close-chapter"><i class="fas fa-times"></i></button>
+                    <button class="btn btn-secondary close-chapter"><i class="fas fa-times"></i></button>
                 </div>
                 
 
                 <div class="chapter-text-inner">
+                    <!-- section shortcut buttons to show on mobile only -->
+                    <div class="open-chapter-buttons-mobile d-xl-none">
+                        <button class="chapter-link btn btn-secondary" data-link="section-1">Responsibility to promote equality and diversity</button>
+                        <button class="chapter-link btn btn-secondary" data-link="section-2">Women are an untapped audience – it makes business sense</button>
+                        <button class="chapter-link btn btn-secondary" data-link="section-3">Diversity of views makes for better content and products</button>
+                        <button class="chapter-link btn btn-secondary" data-link="section-4">Sexism is bad for business</button>
+                        <button class="chapter-link btn btn-primary" data-link="section-5">infographic</button>
+                        <button class="chapter-link btn btn-warning" data-link="section-6">quiz</button>
+                    </div>
+
+                    <!-- begining of text -->
                     <div id="section-1">
                         <h1>Section one</h1>
                         <p>
@@ -314,6 +341,7 @@
                 </div>
             </div>
 
+            <!-- chapter intro -->
             <div class="col-12 col-md-10 offset-md-1 col-xl-5 offset-xl-0 chapter-intro" data-content="chapter-1">
                 <!-- chapter row -->
                 <div class="row m-xl-5">
@@ -365,13 +393,14 @@
                 </div><!--row end-->
             </div>
 
+            <!-- chapter cover image -->
             <div class="col-12 col-md-10 offset-md-1 col-xl-7 offset-xl-0 chapter-image" data-content="chapter-1">
                 <div class="placeholder" data-aos="fade-up"></div>
             </div>
         </div>
     </section>
 
-    <section id="chapter-2" class="container-fluid" data-aos="fade-up">
+    <section id="chapter-2" class="container-fluid">
         <div class="spacer"></div>
         <div class="row">
 
@@ -386,6 +415,16 @@
                 
 
                 <div class="chapter-text-inner">
+                    <!-- section shortcut buttons to show on mobile only -->
+                    <div class="open-chapter-buttons-mobile d-xl-none">
+                        <button class="chapter-link btn btn-secondary" data-link="section-1">concept 1</button>
+                        <button class="chapter-link btn btn-secondary" data-link="section-2">concept 2</button>
+                        <button class="chapter-link btn btn-secondary" data-link="section-3">concept 3</button>
+                        <button class="chapter-link btn btn-secondary" data-link="section-4">concept 4</button>
+                        <button class="chapter-link btn btn-primary" data-link="section-5">infographic</button>
+                        <button class="chapter-link btn btn-warning" data-link="section-6">quiz</button>
+                    </div>
+                    <!-- chapter text starts here -->
                     <div id="section-1">
                         <h1>Section one</h1>
                         <p>
@@ -483,7 +522,7 @@
         </div>
     </section>
 
-    <section id="chapter-3" class="container-fluid" data-aos="fade-up">
+    <section id="chapter-3" class="container-fluid">
         <div class="spacer"></div>
         <div class="row">
 
@@ -498,6 +537,16 @@
                 
 
                 <div class="chapter-text-inner">
+                    <!-- section shortcut buttons to show on mobile only -->
+                    <div class="open-chapter-buttons-mobile d-xl-none">
+                        <button class="chapter-link btn btn-secondary" data-link="section-1">concept 1</button>
+                        <button class="chapter-link btn btn-secondary" data-link="section-2">concept 2</button>
+                        <button class="chapter-link btn btn-secondary" data-link="section-3">concept 3</button>
+                        <button class="chapter-link btn btn-secondary" data-link="section-4">concept 4</button>
+                        <button class="chapter-link btn btn-primary" data-link="section-5">infographic</button>
+                        <button class="chapter-link btn btn-warning" data-link="section-6">quiz</button>
+                    </div>
+                    <!-- chapter text starts here -->
                     <div id="section-1">
                         <h1>Section one</h1>
                         <p>
