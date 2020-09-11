@@ -67,7 +67,7 @@ h1.small, h2.small{
     font-size: 1em;
     color: $dark-grey;
     @include mQ ($xl){
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
 }
 h2{
